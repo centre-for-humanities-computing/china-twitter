@@ -1,2 +1,2 @@
 # china-some
-Repository for code used in the publication
+The code for recreating the analysis for the paper (insert paper title here).
