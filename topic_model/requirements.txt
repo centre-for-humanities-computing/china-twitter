@@ -1,0 +1,7 @@
+pandas
+altair
+numpy
+matplotlib
+seaborn
+pyLDAvis
+gensim
