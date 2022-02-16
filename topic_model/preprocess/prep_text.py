@@ -11,6 +11,7 @@ import pyLDAvis
 import pickle as pkl
 import os
 
+
 def spacy_lemmatize(texts, nlp, **kwargs):
     """Lemmatize texts. 
 
@@ -101,7 +102,7 @@ def clean_lemmas(lemmas):
 
 if __name__ == "__main__":
     #read the data
-    with open('../data/2019-11-01_CT.pkl', 'rb') as handle:
+    with open('data/2019-11-01_CT.pkl', 'rb') as handle:
         df = pkl.load(handle)
     #subset the data to only english
     df_eng = df[df["lang"] == "en"] 
@@ -121,6 +122,5 @@ if __name__ == "__main__":
     texts = [trigram[line] for line in texts]
 
     df_eng["text_clean"] = [" ".join(text) for text in texts]
-    with open("../data/english_clean.pkl", "wb") as file:
+    with open("data/english_clean.pkl", "wb") as file:
         pkl.dump(df_eng, file)
-    #df_eng.to_csv("../data/english_clean.csv", index = False)

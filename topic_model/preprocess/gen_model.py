@@ -106,12 +106,12 @@ def grid_search(df):
                     
                     pbar.update(1)
     data = pd.DataFrame(model_results)
-    with open(f"../data/models/GridSearchLDA.pkl", "wb") as f:
+    with open(f"data/models/GridSearchLDA.pkl", "wb") as f:
             pkl.dump(data, f)
     pbar.close()
 
 if __name__ == "__main__":
-    with open("../data/english_clean.pkl", "rb") as f:
+    with open("data/english_clean.pkl", "rb") as f:
         df = pkl.load(f)
     df = df[df["retweet"] != "retweeted"]
     grid_search(df)
