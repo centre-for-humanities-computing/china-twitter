@@ -1,17 +1,13 @@
 # china-some
 The code for recreating the analysis for the paper (insert paper title here).
 
-For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
+For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda. 
 
-\begin{center}
-\begin{tabular}{ |c|c| } 
- \hline
- Chinese Diplomacy & Chineste State Media \\ [0.5ex]
- @Amb_ChenXu & cell6 \\ 
- @AmbCina & cell9 \\ 
- \hline
-\end{tabular}
-\end{center}
+**Chinese diplomacy:** @Amb_ChenXu, @AmbassadeChine, @AmbCina, @AmbCuiTiankai, @AmbLiuXiaoMing, @CCGBelfast, @China_Lyon, @ChinaAmbUN, @chinacgedi, @ChinaConsulate, @ChinaEmbGermany, @ChinaEUMission, @ChinaInDenmark, @Chinamission2un, @ChinaMissionGva, @ChinaMissionVie, @chinascio, @ChineseEmbinUK, @ChineseEmbinUS, @CHN_UN_NY, @ChnMission, @consulat_de, @GeneralkonsulDu, @MFA_China, @SpokespersonCHN, @SpokespersonHZM, @zlj517
+
+
+**Chinese state media propaganda:** @ouzhounews, @shen_shiwei, @CGTNOfficial, @XHNews, @ChinaDaily, @chenweihua, @CNS1952, @PDChina, @PDChinese, @globaltimesnews, @HuXijin_GT, @XinWen_Ch, @QiushiJournal
+
 
 
 
