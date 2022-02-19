@@ -1,6 +1,20 @@
 # china-some
 The code for recreating the analysis for the paper (insert paper title here).
 
+For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
+
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ Chinese Diplomacy & Chineste State Media \\ [0.5ex]
+ @Amb_ChenXu & cell6 \\ 
+ @AmbCina & cell9 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+
+
 ## Topic model
 Latent Dirichlet Allocation topic modelling using LDA package in python (See documentation:https://lda.readthedocs.io/en/latest/). 
 LDA is a hierarchical Bayesian model with three levels, in which each item of a collection, in this case tweets, is modeled as a finite mixture over an underlying set of topics. In turn, each topic is modeled as an infinite mixture over an underlying set of topic probabilities. An explicit representation of each tweet is provided by the topic probabilities. 
