@@ -3,27 +3,48 @@ The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda. 
 
-**Chinese diplomacy:** @Amb_ChenXu, @AmbassadeChine, @AmbCina, @AmbCuiTiankai, @AmbLiuXiaoMing, @CCGBelfast, @China_Lyon, @ChinaAmbUN, @chinacgedi, @ChinaConsulate, @ChinaEmbGermany, @ChinaEUMission, @ChinaInDenmark, @Chinamission2un, @ChinaMissionGva, @ChinaMissionVie, @chinascio, @ChineseEmbinUK, @ChineseEmbinUS, @CHN_UN_NY, @ChnMission, @consulat_de, @GeneralkonsulDu, @MFA_China, @SpokespersonCHN, @SpokespersonHZM, @zlj517
-
-
-**Chinese state media propaganda:** @ouzhounews, @shen_shiwei, @CGTNOfficial, @XHNews, @ChinaDaily, @chenweihua, @CNS1952, @PDChina, @PDChinese, @globaltimesnews, @HuXijin_GT, @XinWen_Ch, @QiushiJournal
-| Handle      | Week of year ||
-|:-----------:|:------------:|:------------------------------------------------------------------------|
-| @Amb_ChenXu | Chinese diplomacy||
-| @AmbassadeChine| Chinese diplomacy||
-| @AmbCina| Chinese diplomacy||
-| @AmbCuiTiankai| Chinese diplomacy||
-| 5           | Chinese diplomacy||
-| 6           | Chinese diplomacy||
-| 7           | Chinese diplomacy||
-| 8           | Chinese diplomacy||
-| 9           | Chinese diplomacy||
-| 10          | Chinese diplomacy||
-| 11          | Chinese diplomacy||
-| 12          | Chinese diplomacy||
-| 13          | Chinese diplomacy||
-
-
+| Handle          | Account type        ||
+|:----------------|:-------------------:|:------------------------------------------------------------------------|
+| @Amb_ChenXu     | Chinese diplomacy   ||
+| @AmbassadeChine | Chinese diplomacy   ||
+| @AmbCina        | Chinese diplomacy   ||
+| @AmbCuiTiankai  | Chinese diplomacy   ||
+| @AmbLiuXiaoMing | Chinese diplomacy   ||
+| @CCGBelfast     | Chinese diplomacy   ||
+| @China_Lyon     | Chinese diplomacy   ||
+| @ChinaAmbUN     | Chinese diplomacy   ||
+| @chinacgedi     | Chinese diplomacy   ||
+| @ChinaConsulate | Chinese diplomacy   ||
+| @ChinaEmbGermany| Chinese diplomacy   ||
+| @ChinaEUMission | Chinese diplomacy   ||
+| @ChinaInDenmark | Chinese diplomacy   ||
+| @Chinamission2un| Chinese diplomacy   ||
+| @ChinaMissionGva| Chinese diplomacy   ||
+| @ChinaMissionVie| Chinese diplomacy   ||
+| @chinascio      | Chinese diplomacy   ||
+| @ChineseEmbinUK | Chinese diplomacy   ||
+| @ChineseEmbinUS | Chinese diplomacy   ||
+| @CHN_UN_NY      | Chinese diplomacy   ||
+| @ChnMission     | Chinese diplomacy   ||
+| @consulat_de    | Chinese diplomacy   ||
+| @GeneralkonsulDu| Chinese diplomacy   ||
+| @MFA_China      | Chinese diplomacy   ||
+| @SpokespersonCHN| Chinese diplomacy   ||
+| @SpokespersonHZM| Chinese diplomacy   ||
+| @zlj517         | Chinese diplomacy   ||
+| @ouzhounews     | Chinese state media ||
+| @shen_shiwei    | Chinese state media ||
+| @CGTNOfficial   | Chinese state media ||
+| @XHNews         | Chinese state media ||
+| @ChinaDaily     | Chinese state media ||
+| @chenweihua     | Chinese state media ||
+| @CNS1952        | Chinese state media ||
+| @PDChina        | Chinese state media ||
+| @PDChinese      | Chinese state media ||
+| @globaltimesnews| Chinese state media ||
+| @HuXijin_GT     | Chinese state media ||
+| @XinWen_Ch      | Chinese state media ||
+| @QiushiJournal  | Chinese state media ||
 
 
 ## Topic model
