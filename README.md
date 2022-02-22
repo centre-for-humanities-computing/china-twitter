@@ -7,6 +7,21 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 
 **Chinese state media propaganda:** @ouzhounews, @shen_shiwei, @CGTNOfficial, @XHNews, @ChinaDaily, @chenweihua, @CNS1952, @PDChina, @PDChinese, @globaltimesnews, @HuXijin_GT, @XinWen_Ch, @QiushiJournal
+| Handle      | Week of year ||
+|:-----------:|:------------:|:------------------------------------------------------------------------|
+| @Amb_ChenXu | Chinese diplomacy||
+| @AmbassadeChine| Chinese diplomacy||
+| @AmbCina| Chinese diplomacy||
+| @AmbCuiTiankai| Chinese diplomacy||
+| 5           | Chinese diplomacy||
+| 6           | Chinese diplomacy||
+| 7           | Chinese diplomacy||
+| 8           | Chinese diplomacy||
+| 9           | Chinese diplomacy||
+| 10          | Chinese diplomacy||
+| 11          | Chinese diplomacy||
+| 12          | Chinese diplomacy||
+| 13          | Chinese diplomacy||
 
 
 
