@@ -84,3 +84,17 @@ python preprocess/eval_model.py
 When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results.
 
 
+## Semantic kernel
+1.  Navigate to the topic model folder
+```
+cd semantic_kernel
+```
+2. Prepare data for semantic kernel
+
+3. Train model and generate graphs
+
+
+
+
+
+
