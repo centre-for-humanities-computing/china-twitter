@@ -85,14 +85,30 @@ When the model has been generated using above commands, run the code in the topi
 
 
 ## Semantic kernel
-1.  Navigate to the topic model folder
+1.  Navigate to the semantic kernel folder
 ```
 cd semantic_kernel
 ```
-2. Prepare data for semantic kernel
+
+2. Prepare data for semantic kernel (the data used is what was preprocessed for the topic model)
+```
+python prep_semantic/create_subsets.py
+
+python prep_semantic/csv2txt.py -i dataframe_all_from/text_diplomat_version2.csv -o data_semantic/text_diplomat_version2
+python prep_semantic/csv2txt.py -i dataframe_all_from/text_diplomat_orig_version2.csv -o data_semantic/text_diplomat_orig_version2
+```
+
 
 3. Train model and generate graphs
+First time running make sure to set train to True
+```
+run_diplomats.sh
+run_diplomats_orig.sh
+```
 
+
+4. Tweaking of parameters
+* Pruning can be set to none, soft, and hard
 
 
 
