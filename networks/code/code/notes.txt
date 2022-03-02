@@ -1,0 +1,10 @@
+VMP 2022-01-25
+# pipeline: 
+(1) check_raw_files.py: does not have to be run, just to check what we have from Laura
+(2) concat_files.py: concatenates all the files in mention_data.
+(3) check_files.py: check the concatenated files. 
+(4.1) overall_network.py: network overall (does not work). 
+(4.2) network_focus_rescale.py: network of media + diplomats.
+(4.3) summary_stats.py: summary stats (all mentions). 
+(4.4) summary_stats_focus.py: summary stats (media + diplomats)
+(4.5) transactions.py: largest movements between accounts. 

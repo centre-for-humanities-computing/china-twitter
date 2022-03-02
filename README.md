@@ -94,8 +94,8 @@ cd semantic_kernel
 ```
 python prep_semantic/create_subsets.py
 
-python prep_semantic/csv2txt.py -i dataframe_all_from/text_diplomat_version2.csv -o data_semantic/text_diplomat_version2
-python prep_semantic/csv2txt.py -i dataframe_all_from/text_diplomat_orig_version2.csv -o data_semantic/text_diplomat_orig_version2
+python prep_semantic/csv2txt.py -i data/text_diplomat.csv -o data/data_semantic/text_diplomat
+python prep_semantic/csv2txt.py -i data/text_diplomat_orig.csv -o data/data_semantic/text_diplomat_orig
 ```
 
 
@@ -110,7 +110,45 @@ run_diplomats_orig.sh
 4. Tweaking of parameters
 * Pruning can be set to none, soft, and hard
 
+## Network Analysis
+Network analysis performed using the networkx package in python (https://networkx.org/).
+Nodes in the networks are Twitter handles and edges (connections) are weighted by the number of mentions between Twitter handles. 
+The network visualization only plots Twitter handles that are either flagged as Chinese diplomats or Chinese media outlets, but uses the number of mentions from other twitter users to scale node-size in one network visualization (see below). 
+The *edgewidth* (strength of connections) is determined by the number of bi-directional mentions between Twitter handles of Chinese diplomats and media outlets. 
+The *nodesize* (size of handle) is determined by various attributes, such as: 
+* *unweighted degree*: node-size scaled by the number of unique connections between Twitter handle in question and other Chinese diplomats and media outlets (both directions counted). 
+* *weighted degree*: node-size scaled by number of total number of connections  between Twitter handle in question and other Chinese diplomats and media outlets (both directions counted, and each mention counted). 
+* *in-degree*: number of mentions from other Chinese diplomats and media outlets to the Twitter handle in question (only one direction counted).
+* *out-degree*: number of mentions from the Twitter handle in question to other Chinese diplomats and media outlets (only one direction counted).
+* *total mentions*: number of total mentions to the Twitter handle in question from all users (also non-diplomats and non-media). This shows how "popular" the Chinese diplomats and media outlets are on Twitter broadly, rather than just their popularity/activity within the diplomat/media subset. 
 
+
+### Usage:
+1. Navigate to network analysis folder: 
+
+```
+cd networks
+```
+
+2. Prepare data 
+```
+python prep_semantic/create_subsets.py
+
+python prep_semantic/csv2txt.py -i data/text_diplomat.csv -o data/data_semantic/text_diplomat
+python prep_semantic/csv2txt.py -i data/text_diplomat_orig.csv -o data/data_semantic/text_diplomat_orig
+```
+
+
+3. Train model and generate graphs
+First time running make sure to set train to True
+```
+run_diplomats.sh
+run_diplomats_orig.sh
+```
+
+
+4. Tweaking of parameters
+* Pruning can be set to none, soft, and hard
 
 
 
