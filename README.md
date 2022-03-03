@@ -2,8 +2,7 @@ The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
 
-| Diplomacy         |
-| ----------------- |
+#### Diplomacy
 | @handle           | User | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland | 8036 | 68 | 299 | 49 | 348 | 414 | 2019.12 |
 | @AmbassadeChine   | Embassy of the P.R.C. in Paris, France | 36568 | 1136 | 5485 | 1365 | 6850 | 8350 | 2019.08 |
@@ -42,8 +41,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 (*) information gathered 25.02.2022, whereas the rest was gathered 21.06.2021
 
-| Media            |
-| ---------------- |
+#### Media
 | @handle          | User | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | @CGTNOfficial    | China Global Television Network (CGTN) | 13528250 | 70 | 43984 | 12825 | 56809 | 174500 | 2013.01 |
 | @chenweihua      | CHEN Weihua, China Daily E.U. Bureau Chief and columnist | 98677 | 2814 | 9417 | 12349 | 21766 | 38400 | 2009.11 |
