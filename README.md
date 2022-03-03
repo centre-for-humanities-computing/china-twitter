@@ -39,23 +39,24 @@ For the purpose of this study data was collected from select twitter accounts, r
 | @SpokespersonCHN  | HUA Chunying, Spokesperson & Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C.                                               | 894507    | 159        | 2223                      | 132                          | 2355                   | 3522                       | 2019.01      |
 | @SpokespersonHZM  | HU Zhaoming, Spokesperson & Director General, Bureau of Public Information and Communication, International Department, C.P.C. Central Committee, Beijing, P.R.C. | 7707      | 35         | 97                        | 0                            | 97                     | 150                        | 2020.04      |
 | @zlj517           | ZHAO Lijian, Spokesperson & Deputy Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C.                                         | 960093    | 174492     | 1665                      | 9081                         | 10746                  | 65400                      | 2010.05      |
+
 (*) information gathered 25.02.2022, whereas the rest was gathered 21.06.2021
 
 #### Media
-| @handle          | User | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
-| @CGTNOfficial    | China Global Television Network (CGTN) | 13528250 | 70 | 43984 | 12825 | 56809 | 174500 | 2013.01 |
-| @chenweihua      | CHEN Weihua, China Daily E.U. Bureau Chief and columnist | 98677 | 2814 | 9417 | 12349 | 21766 | 38400 | 2009.11 |
-| @ChinaDaily      | China Daily | 4284437 | 537 | 38412 | 1649 | 40061 | 152400 | 2009.11 |
-| @CNS1952         | China News Service | 475273 | 146 | N/A | N/A | N/A | 59000 | 2013.07 |
-| @globaltimesnews | Global Times | 1870039 | 520 | 58646 | 568 | 59214 | 191100 | 2009.06 |
-| @HuXijin\_GT     | HU Xijin, Global Times Editor-in-chief | 439720 | 670 | 880 | 14 | 894 | 2551 | 2014.08 |
-| @PDChina         | People's Daily | 6928270 | 4360 | 17933 | 93 | 18026 | 99400 | 2011.05 |
-| @PDChinese       | People's Daily (Chinese) | 753245 | 332 | N/A | N/A | N/A | 52300 | 2013.06 |
-| @QiushiJournal   | Qiushi Journal | 1691 | 158 | 128 | 0 | 128 | 388 | 2020.05 |
-| @shen\_shiwei    | SHEN Shiwei, CGTN News Producer | 36485 | 4956 | 4554 | 357 | 4911 | 6902 | 2012.05 |
-| @XinWen\_Ch      | Voice of China | 4242 | 1221 | 140 | 26 | 166 | 3793 | 2019.12 |
-| @XHNews          | Xinhua News | 12395089 | 65 | 40019 | 26 | 40045 | 202300 | 2012.02 |
-
+| @handle          | User                                                     | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
+| ---------------- | -------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
+| @CGTNOfficial    | China Global Television Network (CGTN)                   | 13528250  | 70         | 43984                     | 12825                        | 56809                  | 174500                     | 2013.01      |
+| @chenweihua      | CHEN Weihua, China Daily E.U. Bureau Chief and columnist | 98677     | 2814       | 9417                      | 12349                        | 21766                  | 38400                      | 2009.11      |
+| @ChinaDaily      | China Daily                                              | 4284437   | 537        | 38412                     | 1649                         | 40061                  | 152400                     | 2009.11      |
+| @CNS1952         | China News Service                                       | 475273    | 146        | N/A                       | N/A                          | N/A                    | 59000                      | 2013.07      |
+| @globaltimesnews | Global Times                                             | 1870039   | 520        | 58646                     | 568                          | 59214                  | 191100                     | 2009.06      |
+| @HuXijin\_GT     | HU Xijin, Global Times Editor-in-chief                   | 439720    | 670        | 880                       | 14                           | 894                    | 2551                       | 2014.08      |
+| @PDChina         | People's Daily                                           | 6928270   | 4360       | 17933                     | 93                           | 18026                  | 99400                      | 2011.05      |
+| @PDChinese       | People's Daily (Chinese)                                 | 753245    | 332        | N/A                       | N/A                          | N/A                    | 52300                      | 2013.06      |
+| @QiushiJournal   | Qiushi Journal                                           | 1691      | 158        | 128                       | 0                            | 128                    | 388                        | 2020.05      |
+| @shen\_shiwei    | SHEN Shiwei, CGTN News Producer                          | 36485     | 4956       | 4554                      | 357                          | 4911                   | 6902                       | 2012.05      |
+| @XinWen\_Ch      | Voice of China                                           | 4242      | 1221       | 140                       | 26                           | 166                    | 3793                       | 2019.12      |
+| @XHNews          | Xinhua News                                              | 12395089  | 65         | 40019                     | 26                           | 40045                  | 202300                     | 2012.02      |
 
 ## Topic model
 Latent Dirichlet Allocation topic modelling using LDA package in Python (See documentation:https://lda.readthedocs.io/en/latest/). 
