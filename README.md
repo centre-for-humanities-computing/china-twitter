@@ -1,56 +1,71 @@
 The code for recreating the analysis for the paper (insert paper title here).
 
-For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda. 
+For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
 
-| Handle          | Account type        ||
-|:----------------|:--------------------|:------------------------------------------------------------------------|
-| @Amb_ChenXu     | Chinese diplomacy   ||
-| @AmbassadeChine | Chinese diplomacy   ||
-| @AmbCina        | Chinese diplomacy   ||
-| @AmbCuiTiankai  | Chinese diplomacy   ||
-| @AmbLiuXiaoMing | Chinese diplomacy   ||
-| @CCGBelfast     | Chinese diplomacy   ||
-| @China_Lyon     | Chinese diplomacy   ||
-| @ChinaAmbUN     | Chinese diplomacy   ||
-| @chinacgedi     | Chinese diplomacy   ||
-| @ChinaConsulate | Chinese diplomacy   ||
-| @ChinaEmbGermany| Chinese diplomacy   ||
-| @ChinaEUMission | Chinese diplomacy   ||
-| @ChinaInDenmark | Chinese diplomacy   ||
-| @Chinamission2un| Chinese diplomacy   ||
-| @ChinaMissionGva| Chinese diplomacy   ||
-| @ChinaMissionVie| Chinese diplomacy   ||
-| @chinascio      | Chinese diplomacy   ||
-| @ChineseEmbinUK | Chinese diplomacy   ||
-| @ChineseEmbinUS | Chinese diplomacy   ||
-| @CHN_UN_NY      | Chinese diplomacy   ||
-| @ChnMission     | Chinese diplomacy   ||
-| @consulat_de    | Chinese diplomacy   ||
-| @GeneralkonsulDu| Chinese diplomacy   ||
-| @MFA_China      | Chinese diplomacy   ||
-| @SpokespersonCHN| Chinese diplomacy   ||
-| @SpokespersonHZM| Chinese diplomacy   ||
-| @zlj517         | Chinese diplomacy   ||
-| @ouzhounews     | Chinese state media ||
-| @shen_shiwei    | Chinese state media ||
-| @CGTNOfficial   | Chinese state media ||
-| @XHNews         | Chinese state media ||
-| @ChinaDaily     | Chinese state media ||
-| @chenweihua     | Chinese state media ||
-| @CNS1952        | Chinese state media ||
-| @PDChina        | Chinese state media ||
-| @PDChinese      | Chinese state media ||
-| @globaltimesnews| Chinese state media ||
-| @HuXijin_GT     | Chinese state media ||
-| @XinWen_Ch      | Chinese state media ||
-| @QiushiJournal  | Chinese state media ||
+| Diplomacy         |
+| ----------------- |
+| @handle           | User | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
+| @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland | 8036 | 68 | 299 | 49 | 348 | 414 | 2019.12 |
+| @AmbassadeChine   | Embassy of the P.R.C. in Paris, France | 36568 | 1136 | 5485 | 1365 | 6850 | 8350 | 2019.08 |
+| @AmbCina          | Embassy of the P.R.C. in Rome, Italy | 35146 | 151 | 1553 | 137 | 1690 | 2866 | 2018.05 |
+| @AmbCuiTiankai    | CUI Tiankai, former Chinese Ambassador to the U.S. | 135871 | 43 | 260 | 29 | 289 | 416 | 2019.06 |
+| @AmbLiuXiaoMing   | LIU Xiaoming, former Chinese Ambassador to the U.K. | 121828 | 46 | 4606 | 11 | 4617 | 4745 | 2019.01 |
+| @CCGBelfast       | Consulate General of the P.R.C. in Belfast, U.K. | 964 | 8 | 2 | 2 | 4 | 4 | 2020.03 |
+| @China\_Lyon      | Consulate General of the P.R.C. in Lyon, France | 721 | 323 | 25 | 179 | 204 | 300 | 2020.03 |
+| @ChinaAmbUN       | ZHANG Jun, Ambassador, Permanent Representative of the P.R.C. to the U.N. | 10395 | 231 | 406 | 294 | 700 | 1390 | 2020.02 |
+| @ChinaCGCalgary   | Consulate General of the P.R.C. in Calgary, Canada | 2993\* | 196\* | 1292 | 16 | 1308 | 2305 | 2019.12 |
+| @chinacgedi       | Consulate General of the P.R.C. in Edinburgh, U.K. | 1463 | 23 | 37 | 89 | 126 | 241 | 2020.02 |
+| @ChinaCGMTL       | Consulate General of the P.R.C. in Montreal, Canada | 484\* | 68\* | 103 | 86 | 189 | 1430 | 2020.01 |
+| @ChinaConsulate   | Consulate General of the P.R.C. in Chicago, U.S. | 3676 | 146 | 442 | 81 | 523 | 1309 | 2017.02 |
+| @ChinaConSydney   | Consulate General of the P.R.C. in Sydney, Australia | 5851\* | 340\* | 2081 | 333 | 2414 | 4746 | 2020.04 |
+| @ChinaEmbGermany  | Embassy of the P.R.C. in Berlin, Germany | 4409 | 214 | 929 | 449 | 1378 | 1820 | 2019.12 |
+| @ChinaEmbOttawa   | Embassy of the P.R.C. in Ottawa, Canada | 13176\* | 335\* | 559 | 687 | 1246 | 4723 | 2014.07 |
+| @ChinaEUMission   | Mission of the P.R.C. to the E.U. | 21131 | 1913 | 1865 | 292 | 2157 | 10000 | 2013.09 |
+| @ChinaInDenmark   | Embassy of the P.R.C. in Copenhagen, Denmark | 1255 | 511 | 488 | 300 | 788 | 2099 | 2017.05 |
+| @ChinainVan       | Consulate General of the P.R.C. in Vancouver, Canada | 716\* | 57\* | 1 | 2 | 3 | 727 | 2021.02 |
+| @Chinamission2un  | Mission of the P.R.C. to the U.N. | 63414 | 619 | 1292 | 1637 | 2929 | 4744 | 2015.04 |
+| @ChinaMissionGva  | Mission of the P.R.C. to the U.N. office in Geneva, Switzerland | 3482 | 175 | 1146 | 1401 | 2547 | 4526 | 2015.05 |
+| @ChinaMissionVie  | Mission of the P.R.C. to the U.N. office in Vienna, Austria | 3976 | 396 | 655 | 149 | 804 | 1081 | 2019.01 |
+| @chinascio        | State Council Information Office of the P.R.C. | 47975 | 172 | 2478 | 102 | 2580 | 16800 | 2015.09 |
+| @ChineseEmbinUK   | Embassy of the P.R.C. in London, U.K. | 28965 | 40 | 1670 | 139 | 1809 | 2456 | 2019.11 |
+| @ChineseEmbinUS   | Embassy of the P.R.C. in Washington, D.C., U.S. | 86782 | 255 | 1347 | 648 | 1995 | 2375 | 2019.06 |
+| @CHN\_UN\_NY      | Spokesperson of Mission of the P.R.C. to the U.N. | 1438 | 54 | 254 | 969 | 1223 | 1906 | 2020.05 |
+| @ChnConsul\_osaka | Consulate General of the P.R.C. in Osaka, Japan | 18171\* | 741\* | 477 | 673 | 1150 | 3125 | 2019.09 |
+| @ChnEmbassy\_jp   | Embassy of the P.R.C. in Tokyo, Japan | 91103\* | 774\* | 1110 | 500 | 1610 | 5172 | 2014.04 |
+| @ChnMission       | LIU Yuyin, Spokesperson, Permanent Representative of the P.R.C. to the U.N. office in Geneva, Switzerland | 1011 | 97 | 11 | 189 | 200 | 1158 | 2020.01 |
+| @consulat\_de     | Consulate General of the P.R.C. in Strasbourg, France | 955 | 361 | 565 | 1412 | 1977 | 2482 | 2020.02 |
+| @GeneralkonsulDu  | DU Xiaohui, Consul General, Consulate General of the P.R.C. to Hamburg, Germany | 1581 | 85 | 291 | 325 | 616 | 690 | 2020.02 |
+| @MFA\_China       | Ministry of Foreign Affairs, Beijing, P.R.C. | 298033 | 160 | 1630 | 1754 | 3384 | 4177 | 2019.01 |
+| @SpokespersonCHN  | HUA Chunying, Spokesperson & Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C. | 894507 | 159 | 2223 | 132 | 2355 | 3522 | 2019.01 |
+| @SpokespersonHZM  | HU Zhaoming, Spokesperson & Director General, Bureau of Public Information and Communication, International Department, C.P.C. Central Committee, Beijing, P.R.C. | 7707 | 35 | 97 | 0 | 97 | 150 | 2020.04 |
+| @zlj517           | ZHAO Lijian, Spokesperson & Deputy Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C. | 960093 | 174492 | 1665 | 9081 | 10746 | 65400 | 2010.05 |
+
+(*) information gathered 25.02.2022, whereas the rest was gathered 21.06.2021
+
+| Media            |
+| ---------------- |
+| @handle          | User | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
+| @CGTNOfficial    | China Global Television Network (CGTN) | 13528250 | 70 | 43984 | 12825 | 56809 | 174500 | 2013.01 |
+| @chenweihua      | CHEN Weihua, China Daily E.U. Bureau Chief and columnist | 98677 | 2814 | 9417 | 12349 | 21766 | 38400 | 2009.11 |
+| @ChinaDaily      | China Daily | 4284437 | 537 | 38412 | 1649 | 40061 | 152400 | 2009.11 |
+| @CNS1952         | China News Service | 475273 | 146 | N/A | N/A | N/A | 59000 | 2013.07 |
+| @globaltimesnews | Global Times | 1870039 | 520 | 58646 | 568 | 59214 | 191100 | 2009.06 |
+| @HuXijin\_GT     | HU Xijin, Global Times Editor-in-chief | 439720 | 670 | 880 | 14 | 894 | 2551 | 2014.08 |
+| @PDChina         | People's Daily | 6928270 | 4360 | 17933 | 93 | 18026 | 99400 | 2011.05 |
+| @PDChinese       | People's Daily (Chinese) | 753245 | 332 | N/A | N/A | N/A | 52300 | 2013.06 |
+| @QiushiJournal   | Qiushi Journal | 1691 | 158 | 128 | 0 | 128 | 388 | 2020.05 |
+| @shen\_shiwei    | SHEN Shiwei, CGTN News Producer | 36485 | 4956 | 4554 | 357 | 4911 | 6902 | 2012.05 |
+| @XinWen\_Ch      | Voice of China | 4242 | 1221 | 140 | 26 | 166 | 3793 | 2019.12 |
+| @XHNews          | Xinhua News | 12395089 | 65 | 40019 | 26 | 40045 | 202300 | 2012.02 |
 
 
 ## Topic model
-Latent Dirichlet Allocation topic modelling using LDA package in python (See documentation:https://lda.readthedocs.io/en/latest/). 
+Latent Dirichlet Allocation topic modelling using LDA package in Python (See documentation:https://lda.readthedocs.io/en/latest/). 
 LDA is a hierarchical Bayesian model with three levels, in which each item of a collection, in this case tweets, is modeled as a finite mixture over an underlying set of topics. In turn, each topic is modeled as an infinite mixture over an underlying set of topic probabilities. An explicit representation of each tweet is provided by the topic probabilities. 
 
-Usage:
+
+
+### Usage:
 1.  Navigate to the topic model folder
 ```
 cd topic_model
@@ -81,10 +96,20 @@ python preprocess/gen_model.py
 python preprocess/eval_model.py
 ```
 
-When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results.
+When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results. Furthermore, visualisations of how prevalent each topic was over time can be found in the topics_over_time.ipynb. 
 
 
 ## Semantic kernel
+
+
+There are three parameters which can be adjusted:
+* First order associations: Indicates the number associations wanted from each of the seeds (Written in uppercase letters along side the seeds in the graph)
+* Second order associations: Indicates the number of associations wanted from each of the first order associations. (Written in lowercase in the graph)
+* Pruning: Can be set to none, soft and hard. According to the pruning settings, words that are not linked closely enough to the rest of the graph across the hierarchical levels are removed. 
+
+Input given to the model is lists of seeds. Each list should be written as a seperate txt file in the res folder. 
+
+### Usage:
 1.  Navigate to the semantic kernel folder
 ```
 cd semantic_kernel
@@ -100,15 +125,18 @@ python prep_semantic/csv2txt.py -i data/text_diplomat_orig.csv -o data/data_sema
 
 
 3. Train model and generate graphs
+
 First time running make sure to set train to True
 ```
+cd semantic_kernel/semantic-kernel
+
 run_diplomats.sh
 run_diplomats_orig.sh
 ```
 
-
 4. Tweaking of parameters
-* Pruning can be set to none, soft, and hard
+* Pruning: modify the txt file in prun folder
+* First and second order associations: modify the txt file in assoc folder
 
 ## Network Analysis
 Network analysis performed using the networkx package in python (https://networkx.org/).
