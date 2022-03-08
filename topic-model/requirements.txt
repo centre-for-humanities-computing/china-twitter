@@ -3,6 +3,6 @@ altair
 numpy
 matplotlib
 seaborn
-pyLDAvis
+pyLDAvis == 3.2.2
 gensim
 nltk

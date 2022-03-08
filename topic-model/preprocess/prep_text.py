@@ -40,17 +40,17 @@ def clean_lemmas(lemmas):
     Returns:
         list of lists: cleaned list of all lemmas
     """   
+    usa = [[x if x not in [' US ', ' usa ', ' USA ', ' United States of America ', ' U.S. ', ' u.s. ', ]  else 'USA' for x in listing] for listing in lemmas]
+   
     #to lower
-    lemma_to_lower = [[x.lower() for x in listing] for listing in lemmas]
+    lemma_to_lower = [[x.lower() for x in listing] for listing in usa]
     
     #remove stopwords
     non_stops = [[x for x in listing if x not in stopwords] for listing in lemma_to_lower]
-    
-    non_us = [[x if x not in ["u.s."] else "us" for x in listing] for listing in non_stops]
 
     #concat corona
-    non_corona = [[x if x not in ["corona", "coronavirus", "covid-19", "covid_19"] else "covid19" for x in listing] for listing in non_us]
-    
+    non_corona = [[x if x not in [" corona ", " coronavirus ", " covid-19 ", " covid_19 "] else "covid19" for x in listing] for listing in non_stops]
+
     #remove punctuation
     puncts_pattern = re.compile(rf"(?<![a-zA-Z])[{string.punctuation}]+(?![a-zA-Z])")
     non_puncts = [[x for x in listing if not re.match(puncts_pattern, x)] for listing in non_corona]
@@ -66,9 +66,7 @@ def clean_lemmas(lemmas):
     #remove plurals
     plural_pattern = re.compile(r"’|'")
     non_plural = [[x for x in listing if not re.match(plural_pattern, x)] for listing in non_digits]
-
     non_plural = [[x for x in listing if not "'" in x] for listing in non_plural]
-
     non_plural = [[x for x in listing if not "’" in x] for listing in non_plural]
 
     #remove new line
@@ -80,12 +78,11 @@ def clean_lemmas(lemmas):
 
     #only length > 1
     non_length = [[x for x in listing if len(x) >= 2] for listing in non_space]
-
     only_letters_numbers = re.compile(r"[^A-Za-z0-9]+")
     non_others = [[x for x in listing if not re.match(only_letters_numbers, x)] for listing in non_length]
 
-    #only length < 20
-    non_length = [[x for x in listing if len(x) < 20] for listing in non_others]
+    #only length < 25
+    non_length = [[x for x in listing if len(x) < 25] for listing in non_others]
 
     #remove n't and n`t
     non_nt = [[x for x in listing if x != "n’t" or x != "n't"] for listing in non_length]
@@ -96,22 +93,26 @@ def clean_lemmas(lemmas):
     #no tags:
     tags_pattern = re.compile(r"@")
     non_tags = [[x for x in listing if not re.match(tags_pattern, x)] for listing in non_slash]
-
     non_dots = [[x for x in listing if "." not in x] for listing in non_tags]
-    return non_dots
+    
+    #no amp
+    non_amp = [[x for x in listing if "amp" not in x] for listing in non_dots]
+    
+    return non_amp
 
 if __name__ == "__main__":
     #read the data
-    with open('data/2019-11-01_CT.pkl', 'rb') as handle:
-        df = pkl.load(handle)
+    df = pd.read_csv('data/all_from.csv')
     #subset the data to only english
     df_eng = df[df["lang"] == "en"] 
+    #making sure that we differentiate between US and and us and who and WHO
+    df_eng['text'] = df_eng['text'].str.replace(' US ', ' USA ', case = True)
+    df_eng['text'] = df_eng['text'].str.replace(' WHO ', ' WorldHealthOrganization ', case = True)
     #load language model
     nlp = spacy.load("en_core_web_sm")
     #set stopwords
     stopwords = set(stopwords.words("english"))
     lemmas = spacy_lemmatize(df_eng["text"].values, nlp)
-
     texts = clean_lemmas(lemmas)
 
     ## bigrams and trigrams
@@ -122,5 +123,4 @@ if __name__ == "__main__":
     texts = [trigram[line] for line in texts]
 
     df_eng["text_clean"] = [" ".join(text) for text in texts]
-    with open("data/english_clean.pkl", "wb") as file:
-        pkl.dump(df_eng, file)
+    df_eng.to_csv('data/all_from_clean.csv')

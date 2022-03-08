@@ -5,3 +5,5 @@ semantic_kernel/semantic-kernel/data
 semantic_kernel/semantic-kernel/mdl
 semantic_kernel/semantic-kernel/semanticenv
 cnenv
+topic-model/data
+topic-model/theta/xin

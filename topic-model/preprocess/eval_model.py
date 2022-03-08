@@ -1,5 +1,6 @@
 import pickle as pkl
 from gen_model import LDA_model #load previous function for LDA
+import pandas as pd
 
 with open(f"data/models/GridSearchLDA.pkl", "rb") as f:
     data = pkl.load(f)
@@ -16,13 +17,13 @@ diplo = data[(data["Category"] == "Diplomat")]
 best_diplo = diplo[diplo["Coherence"] == max(diplo["Coherence"])]
 
 # english text
-with open("data/english_clean.pkl", "rb") as f:
-    df = pkl.load(f)
-    df = df[df["retweet"] != "retweeted"]
+df = pd.read_csv('data/all_from_clean.csv')
+df = df[df["retweet"] != "retweeted"]
+df['text_clean'] = df['text_clean'].astype(str)
 
 def gen_best_LDA(best_df, df):
     category, topics, alpha, beta, __ = best_df.values[0]
-    df_filt = df[df["Category"] == category]
+    df_filt = df[df["category"] == category]
     
     model_dict = LDA_model(
         df = df_filt, 

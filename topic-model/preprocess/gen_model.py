@@ -82,7 +82,7 @@ def grid_search(df):
     
     #iterate through categories
     for i in categories:
-        df_filt = df[df["Category"] == i]
+        df_filt = df[df["category"] == i]
         # iterate through validation corpuses
         for k in topics_range:
             # iterate through alpha values
@@ -111,8 +111,7 @@ def grid_search(df):
     pbar.close()
 
 if __name__ == "__main__":
-    with open("data/english_clean.pkl", "rb") as f:
-        df = pkl.load(f)
+    df = pd.read_csv('data/all_from_clean.csv')
     df = df[df["retweet"] != "retweeted"]
+    df['text_clean'] = df['text_clean'].astype(str)
     grid_search(df)
-
