@@ -2,7 +2,7 @@ The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
 
-#### Diplomacy
+#### Table 1: Diplomacy
 | @handle           | User                                                                                                                                                              | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
 | @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                               | 8036      | 68         | 299                       | 49                           | 348                    | 414                        | 2019.12      |
@@ -42,7 +42,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 (*) information gathered 25.02.2022, whereas the rest was gathered 21.06.2021
 
-#### Media
+#### Table 2: Media
 | @handle          | User                                                     | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | ---------------- | -------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
 | @CGTNOfficial    | China Global Television Network (CGTN)                   | 13528250  | 70         | 43984                     | 12825                        | 56809                  | 174500                     | 2013.01      |

@@ -40,17 +40,16 @@ def clean_lemmas(lemmas):
     Returns:
         list of lists: cleaned list of all lemmas
     """   
-    usa = [[x if x not in [' US ', ' usa ', ' USA ']  else 'USA' for x in lemmas] for listing in lemmas]
-   
     #to lower
-    lemma_to_lower = [[x.lower() for x in listing] for listing in usa]
+    lemma_to_lower = [[x.lower() for x in listing] for listing in lemmas]
     
     #remove stopwords
     non_stops = [[x for x in listing if x not in stopwords] for listing in lemma_to_lower]
     
+    non_us = [[x if x not in ["u.s."] else "us" for x in listing] for listing in non_stops]
 
     #concat corona
-    non_corona = [[x if x not in [" corona ", " coronavirus ", " covid-19 ", " covid_19 "] else "covid19" for x in listing] for listing in non_stops]
+    non_corona = [[x if x not in ["corona", "coronavirus", "covid-19", "covid_19"] else "covid19" for x in listing] for listing in non_us]
     
     #remove punctuation
     puncts_pattern = re.compile(rf"(?<![a-zA-Z])[{string.punctuation}]+(?![a-zA-Z])")
@@ -99,15 +98,12 @@ def clean_lemmas(lemmas):
     non_tags = [[x for x in listing if not re.match(tags_pattern, x)] for listing in non_slash]
 
     non_dots = [[x for x in listing if "." not in x] for listing in non_tags]
-    
-    #no amp
-    non_amp = [[x for x in listing if "amp" not in x] for listing in non_dots]
-    
-    return non_amp
+    return non_dots
 
 if __name__ == "__main__":
     #read the data
-    df = pd.read_csv('data/all_from.csv')
+    with open('data/2019-11-01_CT.pkl', 'rb') as handle:
+        df = pkl.load(handle)
     #subset the data to only english
     df_eng = df[df["lang"] == "en"] 
     #load language model
@@ -126,4 +122,5 @@ if __name__ == "__main__":
     texts = [trigram[line] for line in texts]
 
     df_eng["text_clean"] = [" ".join(text) for text in texts]
-    df_eng.to_csv('data/all_from_clean.csv')
+    with open("data/english_clean.pkl", "wb") as file:
+        pkl.dump(df_eng, file)
