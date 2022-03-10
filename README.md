@@ -62,6 +62,16 @@ For the purpose of this study data was collected from select twitter accounts, r
 Latent Dirichlet Allocation topic modelling using LDA package in Python (See documentation:https://lda.readthedocs.io/en/latest/). 
 LDA is a hierarchical Bayesian model with three levels, in which each item of a collection, in this case tweets, is modeled as a finite mixture over an underlying set of topics. In turn, each topic is modeled as an infinite mixture over an underlying set of topic probabilities. An explicit representation of each tweet is provided by the topic probabilities. 
 
+A total of 180 models were trained for both diplomat and media tweets with a variation of the following three hyperparameters:
+* Number of Topics (K)
+    * The topic model was trained requesting 10, 15, 20, 25, 30 and 35 latent topics
+* Dirichlet hyperparameter alpha: A-priori document-topic density
+    * The topic model was trained using 6 different a-priori beliefs about the document-topic density, including 0.01, 0.31, 0.61, 0.91, symmetric and asymmetric. (symmetric = 1/num_topics, asymmetric = 1/(topic_index + sqrt(num_topics)))
+* Dirichlet hyperparameter beta: A-priori word-topic density
+    * The topic model was trained using 5 different a-priori beliefs about the word-topic density, including 0.01, 0.31, 0.61, 0.91 and symmetric (symmetric = 1/num_topics)
+
+The model with the best c_v coherence score is chosen for analysis. 
+
 
 
 ### Usage:
