@@ -114,14 +114,15 @@ def plot_network(G, color_dct, node_color, edge_color, labeldict, node_size_lst,
 def main(n_labels, infile, outfolder): 
 
     ''' setup '''
-    print('----- reading data & creating network -----')
+    print('--- starting: visualize networks')
+    print('--> reading data & creating network')
     concat = pd.read_csv(f"{infile}") # load data
     concat = concat[concat["mentionee"] != concat['mentioner']] # remove self-mentions
     concat_sub = concat[(concat["category"] == "Media") | (concat['category'] == 'Diplomat')] # only cited by media or diplomat
     weighted_mention = concat_sub.groupby(['mentionee', 'mentioner', 'category', 'category_mentionee']).size().to_frame('weight').reset_index() # weighted
     G = nx.from_pandas_edgelist(weighted_mention,source='mentioner',target='mentionee', edge_attr='weight', create_using=nx.DiGraph()) # create network
 
-    print('----- generating node & edge attributes -----')
+    print('--> generating node & edge attributes')
     ''' edge attributes '''
     edge_weight = nx.get_edge_attributes(G, 'weight').values()
 
@@ -178,21 +179,21 @@ def main(n_labels, infile, outfolder):
     edge_color = nx.get_edge_attributes(G, 'color').values()
 
     ''' mentions '''
-    print('----- generating mentions plot -----')
+    print('--> generating mentions plot')
     node_divisor = 600
     edge_divisor = 100
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
-    nudge_triple = [
-        ('MFA_China', 0.05, -0.05), 
-        ('ChinaAmbUN', 0, 0.1), 
+    #nudge_triple = [
+        #('MFA_China', 0.05, -0.05), 
+        #('ChinaAmbUN', 0, 0.1), 
         #('ChinaAmbGermany', 0.15, 0),
-        ('ChineseEmbinUK', 0.05, -0.05),
-        ('consulat_de', 0, 0.05),
-        ('CHN_UN_NY', -0.05, 0),
-        ('ChnMission', 0, 0.05),
-        ('ChinaMissionGva', 0, 0.05),
-        ('Chinamission2un', 0, 0.05)]
+        #('ChineseEmbinUK', 0.05, -0.05),
+        #('consulat_de', 0, 0.05),
+        #('CHN_UN_NY', -0.05, 0),
+        #('ChnMission', 0, 0.05),
+        #('ChinaMissionGva', 0, 0.05),
+        #('Chinamission2un', 0, 0.05)]
 
     plot_network(
         G = G, 
@@ -206,12 +207,12 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder,
+        outfolder = outfolder)
         #seed = seed,
-        nudge_triple = nudge_triple)
+        #nudge_triple = nudge_triple)
 
     ## unweighted degree
-    print('----- generating unweighted degree plot -----')
+    print('--> generating unweighted degree plot')
     node_divisor = 0.05
     edge_divisor = 100
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors)'
@@ -229,12 +230,12 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder,
-        nudge_triple = nudge_triple)
+        outfolder = outfolder)
+        #nudge_triple = nudge_triple)
         #nudge_triple = nudge_triple)
 
     ## weighted degree 
-    print('----- generating weighted degree plot -----')
+    print('--> generating weighted degree plot')
     node_divisor = 2.5
     edge_divisor = 100
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors weighted)'
@@ -252,12 +253,12 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder,
-        nudge_triple = nudge_triple)
+        outfolder = outfolder)
+        #nudge_triple = nudge_triple)
         #nudge_triple = nudge_triple)
 
     ''' in-degree '''
-    print('----- generating in-degree plot -----')
+    print('--> generating in-degree plot')
     node_divisor = 1.5
     edge_divisor = 100
     title = 'Diplomats and Media sub-network (nodesize: in-degree -- inwards)'
@@ -275,12 +276,12 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder,
-        nudge_triple = nudge_triple)
+        outfolder = outfolder)
+        #nudge_triple = nudge_triple)
         #nudge_triple = nudge_triple)
 
     ## out-degree
-    print('----- generating out-degree plot -----')
+    print('--> generating out-degree plot')
     node_divisor = 1.5
     edge_divisor = 100
     title = 'Diplomats and Media sub-network (nodesize: out-degree -- outwards)'
@@ -298,8 +299,8 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder,
-        nudge_triple = nudge_triple)
+        outfolder = outfolder)
+        #nudge_triple = nudge_triple)
         #nudge_triple = nudge_triple)
 
 if __name__ == "__main__":

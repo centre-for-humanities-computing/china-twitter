@@ -1,9 +1,0 @@
-# connections 
-diplomat-diplomat (10395) 
-diplomat-media (1325) 
-media-diplomat (845) 
-media-media (832)
-So, overwhelming dominance of diplomat-diplomat. 
-
-# the plots 
-... 
