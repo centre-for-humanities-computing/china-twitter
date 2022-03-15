@@ -6,7 +6,6 @@ For the purpose of this study data was collected from select twitter accounts, r
 | ------------------------------------------------------------------------ | -------------------------- |
 | **Date range**                                                           | Nov 1, 2019 - Feb 28, 2021 |
 | Days collected                                                           | 486                        |
-|                                                                          |                            |
 | Handles collected                                                        | 46                         |
 | Diplomacy                                                                | 34                         |
 | Media                                                                    | 12                         |
