@@ -1,10 +1,11 @@
 The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
-#### Table 1: Data Collection
+#### Table 1
 |                                                                          |                            |
 | ------------------------------------------------------------------------ | -------------------------- |
-| **Date range**                                                           | Nov 1, 2019 - Feb 28, 2021 |
+| **Data collection**                                                      |                            |
+| Date range                                                               | Nov 1, 2019 - Feb 28, 2021 |
 | Days collected                                                           | 486                        |
 | Handles collected                                                        | 46                         |
 | Diplomacy                                                                | 34                         |
@@ -23,7 +24,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 
 #### Table x: Diplomacy
-| @handle           | User                                                                                                                                                              | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
+| @handle           | User                                                                                                                                                            | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
 | @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                               | 8036      | 68         | 299                       | 49                           | 348                    | 414                        | 2019.12      |
 | @AmbassadeChine   | Embassy of the P.R.C. in Paris, France                                                                                                                            | 36568     | 1136       | 5485                      | 1365                         | 6850                   | 8350                       | 2019.08      |
