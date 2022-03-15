@@ -2,8 +2,9 @@ The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
 #### Table 1: Data Collection
+|                                                                          |                            |
 | ------------------------------------------------------------------------ | -------------------------- |
-| **Date range**                                                          | Nov 1, 2019 - Feb 28, 2021|
+| **Date range**                                                           | Nov 1, 2019 - Feb 28, 2021 |
 | Days collected                                                           | 486                        |
 |                                                                          |                            |
 | Handles collected                                                        | 46                         |
