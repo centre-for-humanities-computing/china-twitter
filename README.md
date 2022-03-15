@@ -1,8 +1,28 @@
 The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
+#### Table 1: Data Collection
+| -------------------------------------------------------------------- | -------------------------- |
+| Date range                                                           | Nov 1, 2019 - Feb 28, 2021 |
+| Days collected                                                       | 486                        |
+|                                                                      |                            |
+| Handles collected                                                    | 46                         |
+| Diplomacy                                                            | 34                         |
+| Media                                                                | 12                         |
+| Datasets                                                             |                            |
+|                                                                      | Number of cases            |
+| 1\. Total tweets and retweets collected (network analysis)           | 343.148                    |
+| 1a. Diplomacy tweets                                                 | 37.344                     |
+| 1b. Diplomacy retweets                                               | 23.512                     |
+| 1c. Media tweets                                                     | 253.578                    |
+| 1d. Media retweets                                                   | 28.714                     |
+| 2\. Subsample of original tweets in English (topic analysis)         | 239.943                    |
+| 2a. Diplomacy                                                        | 25.830                     |
+| 2.b Media                                                            | 214.113                    |
+| 3\. Coded sample of diplomacy tweets in English (discourse analysis) | Tilføj                     |
 
-#### Table 1: Diplomacy
+
+#### Table x: Diplomacy
 | @handle           | User                                                                                                                                                              | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
 | @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                               | 8036      | 68         | 299                       | 49                           | 348                    | 414                        | 2019.12      |
@@ -42,7 +62,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 (*) information gathered 25.02.2022, whereas the rest was gathered 21.06.2021
 
-#### Table 2: Media
+#### Table x: Media
 | @handle          | User                                                     | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
 | ---------------- | -------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
 | @CGTNOfficial    | China Global Television Network (CGTN)                   | 13528250  | 70         | 43984                     | 12825                        | 56809                  | 174500                     | 2013.01      |
