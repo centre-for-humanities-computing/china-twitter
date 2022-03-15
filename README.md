@@ -2,24 +2,24 @@ The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
 #### Table 1: Data Collection
-| -------------------------------------------------------------------- | -------------------------- |
-| Date range                                                           | Nov 1, 2019 - Feb 28, 2021 |
-| Days collected                                                       | 486                        |
-|                                                                      |                            |
-| Handles collected                                                    | 46                         |
-| Diplomacy                                                            | 34                         |
-| Media                                                                | 12                         |
-| Datasets                                                             |                            |
-|                                                                      | Number of cases            |
-| 1\. Total tweets and retweets collected (network analysis)           | 343.148                    |
-| 1a. Diplomacy tweets                                                 | 37.344                     |
-| 1b. Diplomacy retweets                                               | 23.512                     |
-| 1c. Media tweets                                                     | 253.578                    |
-| 1d. Media retweets                                                   | 28.714                     |
-| 2\. Subsample of original tweets in English (topic analysis)         | 239.943                    |
-| 2a. Diplomacy                                                        | 25.830                     |
-| 2.b Media                                                            | 214.113                    |
-| 3\. Coded sample of diplomacy tweets in English (discourse analysis) | Tilføj                     |
+| Date range                                                               | Nov 1, 2019 - Feb 28, 2021 |
+| ------------------------------------------------------------------------ | -------------------------- |
+| Days collected                                                           | 486                        |
+|                                                                          |                            |
+| Handles collected                                                        | 46                         |
+| Diplomacy                                                                | 34                         |
+| Media                                                                    | 12                         |
+| **Datasets**                                                             |                            |
+|                                                                          | Number of cases            |
+| **1\. Total tweets and retweets collected (network analysis)**           | **343.148**                |
+| 1a. Diplomacy tweets                                                     | 37.344                     |
+| 1b. Diplomacy retweets                                                   | 23.512                     |
+| 1c. Media tweets                                                         | 253.578                    |
+| 1d. Media retweets                                                       | 28.714                     |
+| **2\. Subsample of original tweets in English (topic analysis)**         | **239.943**                |
+| 2a. Diplomacy                                                            | 25.830                     |
+| 2.b Media                                                                | 214.113                    |
+| **3\. Coded sample of diplomacy tweets in English (discourse analysis)** | Tilføj                     |
 
 
 #### Table x: Diplomacy
