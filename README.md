@@ -80,7 +80,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 | @XHNews          | Xinhua News                                              | 12395089  | 65         | 40019                     | 26                           | 40045                  | 202300                     | 2012.02      |
 
 ## Extract data
-The code used for creating dataframes from the JSON files can be found in the ´extract_data´ folder. 
+The code used for creating dataframes from the JSON files can be found in the ´´´extract_data´´´ folder. 
 
 
 ## Topic model
@@ -130,7 +130,7 @@ python preprocess/gen_model.py
 python preprocess/eval_model.py
 ```
 
-When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results. Furthermore, visualisations of how prevalent each topic was over time (averaged topic weight) can be found in the ´topics_over_time.ipyn´. 
+When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results. Furthermore, visualisations of how prevalent each topic was over time (averaged topic weight) can be found in the ´´´topics_over_time.ipyn´´´. 
 
 
 ## Semantic kernel
