@@ -79,6 +79,10 @@ For the purpose of this study data was collected from select twitter accounts, r
 | @XinWen\_Ch      | Voice of China                                           | 4242      | 1221       | 140                       | 26                           | 166                    | 3793                       | 2019.12      |
 | @XHNews          | Xinhua News                                              | 12395089  | 65         | 40019                     | 26                           | 40045                  | 202300                     | 2012.02      |
 
+## Extract data
+The code used for creating dataframes from the JSON files can be found in the ´extract_data´ folder. 
+
+
 ## Topic model
 Latent Dirichlet Allocation topic modelling using LDA package in Python (See documentation:https://lda.readthedocs.io/en/latest/). 
 LDA is a hierarchical Bayesian model with three levels, in which each item of a collection, in this case tweets, is modeled as a finite mixture over an underlying set of topics. In turn, each topic is modeled as an infinite mixture over an underlying set of topic probabilities. An explicit representation of each tweet is provided by the topic probabilities. 
@@ -126,7 +130,7 @@ python preprocess/gen_model.py
 python preprocess/eval_model.py
 ```
 
-When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results. Furthermore, visualisations of how prevalent each topic was over time can be found in the topics_over_time.ipynb. 
+When the model has been generated using above commands, run the code in the topic_model.ipynb to visualize the results. Furthermore, visualisations of how prevalent each topic was over time (averaged topic weight) can be found in the ´topics_over_time.ipyn´. 
 
 
 ## Semantic kernel
