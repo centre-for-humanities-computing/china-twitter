@@ -88,13 +88,10 @@ A total of 180 models were trained for both diplomat and media tweets with a var
     * The topic model was trained requesting 10, 15, 20, 25, 30 and 35 latent topics
 * Dirichlet hyperparameter alpha: A-priori document-topic density
     * The topic model was trained using 6 different a-priori beliefs about the document-topic density, including 0.01, 0.31, 0.61, 0.91, symmetric ![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cfrac%7B1%7D%7Bn_%7Btopics%7D%7D%5Cright)) and asymmetric ![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cfrac%7B1%7D%7Btopic_%7Bi%7D%20&plus;%20%5Csqrt%7Bn_%7Btopics%7D%7D%7D%5Cright))
-).
 * Dirichlet hyperparameter beta: A-priori word-topic density
     * The topic model was trained using 5 different a-priori beliefs about the word-topic density, including 0.01, 0.31, 0.61, 0.91 and symmetric ![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cfrac%7B1%7D%7Bn_%7Btopics%7D%7D%5Cright))
 
-The model with the best ![equation](https://latex.codecogs.com/svg.image?c_v)
-
-coherence score is chosen for analysis. 
+The model with the best ![equation](https://latex.codecogs.com/svg.image?c_v) coherence score is chosen for analysis. 
 
 
 
