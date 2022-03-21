@@ -26,7 +26,7 @@ def plot_summary(df, id_col, measure_col, n, title, xlab, ylab, outpath, outname
 
 def main(infile, outpath):
 
-    print(f"--- starting: statistics for whole network ---")
+    print(f"--- starting: stats for sub ---")
     # load 
     concat = pd.read_csv(f"{infile}")
 
@@ -85,7 +85,7 @@ def main(infile, outpath):
     plot_summary(eigen_df, "id", "eigen", 10, "Top 10 nodes eigenvector centrality (sub-network)", "Handle", "Eigenvector Centrality", outpath, "summary_focus_eigenvector.png")
     plot_summary(close_df, "id", "close", 10, "Top 10 nodes closeness centrality (sub-network)", "Handle", "Closeness Centrality", outpath, "summary_focus_closeness.png")
 
-    print(f"--- finished: statistics for whole network ---")
+    print(f"--- finished: stats for sub ---")
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()

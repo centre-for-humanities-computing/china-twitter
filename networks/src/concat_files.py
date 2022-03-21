@@ -33,6 +33,17 @@ def subset_dates(df, filter_dates="True"):
 def main(inpath, outpath, outname, filter_dates = "True"): # , engine='python', error_bad_lines=False)
     print("--- starting: processing ---")
     onlyfiles = [f for f in listdir(inpath) if isfile(join(inpath, f))]
+    
+    # testing something
+    '''
+    for file in onlyfiles: 
+        try: 
+            d = pd.read_csv(f"{inpath}{file}")
+            print(f"file succes: {file}")
+        except UnicodeDecodeError: 
+            print(f"file fail: {file}")
+    '''
+    
     df_list = [pd.read_csv(f"{inpath}{onlyfile}") for onlyfile in onlyfiles] # Skipping line 556991: unexpected end of data
     df_gathered = pd.concat(df_list)
     df_clean = subset_dates(df_gathered, filter_dates)
