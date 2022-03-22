@@ -143,7 +143,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 | #魅力疆藏                               | 102             |
 | #who                                   | 100             |
 | #uk                                    | 98              |
-| #covidãƒ¼19                            | 90              |
+| #covidー19                              | 90              |
 | #jiangsu                               | 90              |
 | #chinese                               | 89              |
 | #multilateralism                       | 89              |
