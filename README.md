@@ -129,7 +129,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 | #hongkong                              | 450             |
 | #wuhan                                 | 278             |
 | #xijinping                             | 247             |
-| #ç•…æ¸¸å‹åŸŽ                          | 176             |
+| #畅游友城                               | 176             |
 | #covid                                 | 172             |
 | #voyagezdanslesvilleschinoisesjumelées | 171             |
 | #us                                    | 159             |
@@ -140,7 +140,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 | #xizang                                | 124             |
 | #shanghai                              | 115             |
 | #nationalsecuritylaw                   | 114             |
-| #é­…åŠ›ç–†è—                          | 102             |
+| #魅力疆藏                               | 102             |
 | #who                                   | 100             |
 | #uk                                    | 98              |
 | #covidãƒ¼19                            | 90              |
