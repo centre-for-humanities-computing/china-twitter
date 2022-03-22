@@ -2,82 +2,162 @@ The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
 #### Table 1
-|                                                                          |                            |
-| ------------------------------------------------------------------------ | -------------------------- |
-| **Data collection**                                                      |                            |
-| Date range                                                               | Nov 1, 2019 - Feb 28, 2021 |
-| Days collected                                                           | 486                        |
-| Handles collected                                                        | 46                         |
-| Diplomacy                                                                | 34                         |
-| Media                                                                    | 12                         |
-| **Datasets**                                                             |                            |
-|                                                                          | Number of cases            |
-| **1\. Total tweets and retweets collected (network analysis)**           | **343.148**                |
-| 1a. Diplomacy tweets                                                     | 37.344                     |
-| 1b. Diplomacy retweets                                                   | 23.512                     |
-| 1c. Media tweets                                                         | 253.578                    |
-| 1d. Media retweets                                                       | 28.714                     |
-| **2\. Subsample of original tweets in English (topic analysis)**         | **239.943**                |
-| 2a. Diplomacy                                                            | 25.830                     |
-| 2.b Media                                                                | 214.113                    |
-| **3\. Coded sample of diplomacy tweets in English (discourse analysis)** | Tilføj                     |
+| Data collection                                                               |                            |
+| ----------------------------------------------------------------------------- | -------------------------- |
+| Date range                                                                    | Nov 1, 2019 - Feb 28, 2021 |
+| Days collected                                                                | 486                        |
+|                                                                               |                            |
+| Handles collected                                                             | 46                         |
+| Diplomacy                                                                     | 34                         |
+| Media                                                                         | 12                         |
+|                                                                               |                            |
+| Datasets                                                                      | Number of cases            |
+| 1\. Total original tweets and retweets collected (network analysis)           | 343.148                    |
+| 1a. Diplomacy original tweets                                                 | 37.344                     |
+| 1b. Diplomacy retweets                                                        | 23.512                     |
+| 1c. Media original tweets                                                     | 253.578                    |
+| 1d. Media retweets                                                            | 28.714                     |
+| 2\. Subsample of original tweets in English (topic analysis)                  | 239.943                    |
+| 2a. Diplomacy                                                                 | 25.830                     |
+| 2.b Media                                                                     | 214.113                    |
+| 3\. Coded sample of diplomacy original tweets in English (discourse analysis) | 1.200                      |
 
 
-#### Table x: Diplomacy
-| @handle           | User                                                                                                                                                            | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
-| @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                               | 8036      | 68         | 299                       | 49                           | 348                    | 414                        | 2019.12      |
-| @AmbassadeChine   | Embassy of the P.R.C. in Paris, France                                                                                                                            | 36568     | 1136       | 5485                      | 1365                         | 6850                   | 8350                       | 2019.08      |
-| @AmbCina          | Embassy of the P.R.C. in Rome, Italy                                                                                                                              | 35146     | 151        | 1553                      | 137                          | 1690                   | 2866                       | 2018.05      |
-| @AmbCuiTiankai    | CUI Tiankai, former Chinese Ambassador to the U.S.                                                                                                                | 135871    | 43         | 260                       | 29                           | 289                    | 416                        | 2019.06      |
-| @AmbLiuXiaoMing   | LIU Xiaoming, former Chinese Ambassador to the U.K.                                                                                                               | 121828    | 46         | 4606                      | 11                           | 4617                   | 4745                       | 2019.01      |
-| @CCGBelfast       | Consulate General of the P.R.C. in Belfast, U.K.                                                                                                                  | 964       | 8          | 2                         | 2                            | 4                      | 4                          | 2020.03      |
-| @China\_Lyon      | Consulate General of the P.R.C. in Lyon, France                                                                                                                   | 721       | 323        | 25                        | 179                          | 204                    | 300                        | 2020.03      |
-| @ChinaAmbUN       | ZHANG Jun, Ambassador, Permanent Representative of the P.R.C. to the U.N.                                                                                         | 10395     | 231        | 406                       | 294                          | 700                    | 1390                       | 2020.02      |
-| @ChinaCGCalgary   | Consulate General of the P.R.C. in Calgary, Canada                                                                                                                | 2993\*    | 196\*      | 1292                      | 16                           | 1308                   | 2305                       | 2019.12      |
-| @chinacgedi       | Consulate General of the P.R.C. in Edinburgh, U.K.                                                                                                                | 1463      | 23         | 37                        | 89                           | 126                    | 241                        | 2020.02      |
-| @ChinaCGMTL       | Consulate General of the P.R.C. in Montreal, Canada                                                                                                               | 484\*     | 68\*       | 103                       | 86                           | 189                    | 1430                       | 2020.01      |
-| @ChinaConsulate   | Consulate General of the P.R.C. in Chicago, U.S.                                                                                                                  | 3676      | 146        | 442                       | 81                           | 523                    | 1309                       | 2017.02      |
-| @ChinaConSydney   | Consulate General of the P.R.C. in Sydney, Australia                                                                                                              | 5851\*    | 340\*      | 2081                      | 333                          | 2414                   | 4746                       | 2020.04      |
-| @ChinaEmbGermany  | Embassy of the P.R.C. in Berlin, Germany                                                                                                                          | 4409      | 214        | 929                       | 449                          | 1378                   | 1820                       | 2019.12      |
-| @ChinaEmbOttawa   | Embassy of the P.R.C. in Ottawa, Canada                                                                                                                           | 13176\*   | 335\*      | 559                       | 687                          | 1246                   | 4723                       | 2014.07      |
-| @ChinaEUMission   | Mission of the P.R.C. to the E.U.                                                                                                                                 | 21131     | 1913       | 1865                      | 292                          | 2157                   | 10000                      | 2013.09      |
-| @ChinaInDenmark   | Embassy of the P.R.C. in Copenhagen, Denmark                                                                                                                      | 1255      | 511        | 488                       | 300                          | 788                    | 2099                       | 2017.05      |
-| @ChinainVan       | Consulate General of the P.R.C. in Vancouver, Canada                                                                                                              | 716\*     | 57\*       | 1                         | 2                            | 3                      | 727                        | 2021.02      |
-| @Chinamission2un  | Mission of the P.R.C. to the U.N.                                                                                                                                 | 63414     | 619        | 1292                      | 1637                         | 2929                   | 4744                       | 2015.04      |
-| @ChinaMissionGva  | Mission of the P.R.C. to the U.N. office in Geneva, Switzerland                                                                                                   | 3482      | 175        | 1146                      | 1401                         | 2547                   | 4526                       | 2015.05      |
-| @ChinaMissionVie  | Mission of the P.R.C. to the U.N. office in Vienna, Austria                                                                                                       | 3976      | 396        | 655                       | 149                          | 804                    | 1081                       | 2019.01      |
-| @chinascio        | State Council Information Office of the P.R.C.                                                                                                                    | 47975     | 172        | 2478                      | 102                          | 2580                   | 16800                      | 2015.09      |
-| @ChineseEmbinUK   | Embassy of the P.R.C. in London, U.K.                                                                                                                             | 28965     | 40         | 1670                      | 139                          | 1809                   | 2456                       | 2019.11      |
-| @ChineseEmbinUS   | Embassy of the P.R.C. in Washington, D.C., U.S.                                                                                                                   | 86782     | 255        | 1347                      | 648                          | 1995                   | 2375                       | 2019.06      |
-| @CHN\_UN\_NY      | Spokesperson of Mission of the P.R.C. to the U.N.                                                                                                                 | 1438      | 54         | 254                       | 969                          | 1223                   | 1906                       | 2020.05      |
-| @ChnConsul\_osaka | Consulate General of the P.R.C. in Osaka, Japan                                                                                                                   | 18171\*   | 741\*      | 477                       | 673                          | 1150                   | 3125                       | 2019.09      |
-| @ChnEmbassy\_jp   | Embassy of the P.R.C. in Tokyo, Japan                                                                                                                             | 91103\*   | 774\*      | 1110                      | 500                          | 1610                   | 5172                       | 2014.04      |
-| @ChnMission       | LIU Yuyin, Spokesperson, Permanent Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                         | 1011      | 97         | 11                        | 189                          | 200                    | 1158                       | 2020.01      |
-| @consulat\_de     | Consulate General of the P.R.C. in Strasbourg, France                                                                                                             | 955       | 361        | 565                       | 1412                         | 1977                   | 2482                       | 2020.02      |
-| @GeneralkonsulDu  | DU Xiaohui, Consul General, Consulate General of the P.R.C. to Hamburg, Germany                                                                                   | 1581      | 85         | 291                       | 325                          | 616                    | 690                        | 2020.02      |
-| @MFA\_China       | Ministry of Foreign Affairs, Beijing, P.R.C.                                                                                                                      | 298033    | 160        | 1630                      | 1754                         | 3384                   | 4177                       | 2019.01      |
-| @SpokespersonCHN  | HUA Chunying, Spokesperson & Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C.                                               | 894507    | 159        | 2223                      | 132                          | 2355                   | 3522                       | 2019.01      |
-| @SpokespersonHZM  | HU Zhaoming, Spokesperson & Director General, Bureau of Public Information and Communication, International Department, C.P.C. Central Committee, Beijing, P.R.C. | 7707      | 35         | 97                        | 0                            | 97                     | 150                        | 2020.04      |
-| @zlj517           | ZHAO Lijian, Spokesperson & Deputy Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C.                                         | 960093    | 174492     | 1665                      | 9081                         | 10746                  | 65400                      | 2010.05      |
+#### Table 2: Diplomacy
+| @handle           | User                                                                                                                                                              | Followers | Followings | Original tweets in period | Original tweets in English | Retweets by handle in period | Retweets in English | Hashtags in original tweets | Hashtags in retweets | Total tweets in period | Total tweets since created | Date created |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- | ------------------------- | -------------------------- | ---------------------------- | ------------------- | --------------------------- | -------------------- | ---------------------- | -------------------------- | ------------ |
+| @Amb\_ChenXu      | CHEN Xu, Ambassador, Permant Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                               | 8036      | 68         | 299                       | 298                        | 49                           | 46                  | 22                          | 41                   | 348                    | 414                        | 2019.12      |
+| @AmbassadeChine   | Embassy of the P.R.C. in Paris, France                                                                                                                            | 36568     | 1136       | 5485                      | 136                        | 1365                         | 263                 | 2349                        | 2290                 | 6850                   | 8350                       | 2019.08      |
+| @AmbCina          | Embassy of the P.R.C. in Rome, Italy                                                                                                                              | 35146     | 151        | 1553                      | 0                          | 137                          | 95                  | 3715                        | 160                  | 1690                   | 2866                       | 2018.05      |
+| @AmbCuiTiankai    | CUI Tiankai, former Chinese Ambassador to the U.S.                                                                                                                | 135871    | 43         | 260                       | 250                        | 29                           | 28                  | 150                         | 33                   | 289                    | 416                        | 2019.06      |
+| @AmbLiuXiaoMing   | LIU Xiaoming, former Chinese Ambassador to the U.K.                                                                                                               | 121828    | 46         | 4606                      | 4465                       | 11                           | 11                  | 2865                        | 10                   | 4617                   | 4745                       | 2019.01      |
+| @CCGBelfast       | Consulate General of the P.R.C. in Belfast, U.K.                                                                                                                  | 964       | 8          | 2                         | 2                          | 2                            | 2                   | 0                           | 0                    | 4                      | 4                          | 2020.03      |
+| @China\_Lyon      | Consulate General of the P.R.C. in Lyon, France                                                                                                                   | 721       | 323        | 25                        | 2                          | 179                          | 8                   | 10                          | 164                  | 204                    | 300                        | 2020.03      |
+| @ChinaAmbUN       | ZHANG Jun, Ambassador, Permanent Representative of the P.R.C. to the U.N.                                                                                         | 10395     | 231        | 406                       | 381                        | 294                          | 290                 | 174                         | 218                  | 700                    | 1390                       | 2020.02      |
+| @ChinaCGCalgary   | Consulate General of the P.R.C. in Calgary, Canada                                                                                                                | 2993\*    | 196\*      | 1292                      | 1260                       | 16                           | 16                  | 49                          | 5                    | 1308                   | 2305                       | 2019.12      |
+| @chinacgedi       | Consulate General of the P.R.C. in Edinburgh, U.K.                                                                                                                | 1463      | 23         | 37                        | 37                         | 89                           | 86                  | 8                           | 115                  | 126                    | 241                        | 2020.02      |
+| @ChinaCGMTL       | Consulate General of the P.R.C. in Montreal, Canada                                                                                                               | 484\*     | 68\*       | 103                       | 26                         | 86                           | 57                  | 39                          | 100                  | 189                    | 1430                       | 2020.01      |
+| @ChinaConsulate   | Consulate General of the P.R.C. in Chicago, U.S.                                                                                                                  | 3676      | 146        | 442                       | 428                        | 81                           | 81                  | 139                         | 61                   | 523                    | 1309                       | 2017.02      |
+| @ChinaConSydney   | Consulate General of the P.R.C. in Sydney, Australia                                                                                                              | 5851\*    | 340\*      | 2081                      | 2066                       | 333                          | 321                 | 2285                        | 329                  | 2414                   | 4746                       | 2020.04      |
+| @ChinaEmbGermany  | Embassy of the P.R.C. in Berlin, Germany                                                                                                                          | 4409      | 214        | 929                       | 50                         | 449                          | 354                 | 1217                        | 431                  | 1378                   | 1820                       | 2019.12      |
+| @ChinaEmbOttawa   | Embassy of the P.R.C. in Ottawa, Canada                                                                                                                           | 13176\*   | 335\*      | 559                       | 543                        | 687                          | 680                 | 27                          | 768                  | 1246                   | 4723                       | 2014.07      |
+| @ChinaEUMission   | Mission of the P.R.C. to the E.U.                                                                                                                                 | 21131     | 1913       | 1865                      | 1675                       | 292                          | 286                 | 1427                        | 293                  | 2157                   | 10000                      | 2013.09      |
+| @ChinaInDenmark   | Embassy of the P.R.C. in Copenhagen, Denmark                                                                                                                      | 1255      | 511        | 488                       | 470                        | 300                          | 291                 | 108                         | 361                  | 788                    | 2099                       | 2017.05      |
+| @ChinainVan       | Consulate General of the P.R.C. in Vancouver, Canada                                                                                                              | 716\*     | 57\*       | 1                         | 1                          | 2                            | 2                   | 0                           | 0                    | 3                      | 727                        | 2021.02      |
+| @Chinamission2un  | Mission of the P.R.C. to the U.N.                                                                                                                                 | 63414     | 619        | 1292                      | 1263                       | 1637                         | 1617                | 796                         | 1613                 | 2929                   | 4744                       | 2015.04      |
+| @ChinaMissionGva  | Mission of the P.R.C. to the U.N. office in Geneva, Switzerland                                                                                                   | 3482      | 175        | 1146                      | 1069                       | 1401                         | 1379                | 584                         | 1076                 | 2547                   | 4526                       | 2015.05      |
+| @ChinaMissionVie  | Mission of the P.R.C. to the U.N. office in Vienna, Austria                                                                                                       | 3976      | 396        | 655                       | 654                        | 149                          | 148                 | 924                         | 123                  | 804                    | 1081                       | 2019.01      |
+| @chinascio        | State Council Information Office of the P.R.C.                                                                                                                    | 47975     | 172        | 2478                      | 2465                       | 102                          | 100                 | 4062                        | 103                  | 2580                   | 16800                      | 2015.09      |
+| @ChineseEmbinUK   | Embassy of the P.R.C. in London, U.K.                                                                                                                             | 28965     | 40         | 1670                      | 1395                       | 139                          | 138                 | 846                         | 110                  | 1809                   | 2456                       | 2019.11      |
+| @ChineseEmbinUS   | Embassy of the P.R.C. in Washington, D.C., U.S.                                                                                                                   | 86782     | 255        | 1347                      | 1262                       | 648                          | 630                 | 1256                        | 681                  | 1995                   | 2375                       | 2019.06      |
+| @CHN\_UN\_NY      | Spokesperson of Mission of the P.R.C. to the U.N.                                                                                                                 | 1438      | 54         | 254                       | 253                        | 969                          | 942                 | 24                          | 673                  | 1223                   | 1906                       | 2020.05      |
+| @ChnConsul\_osaka | Consulate General of the P.R.C. in Osaka, Japan                                                                                                                   | 18171\*   | 741\*      | 477                       | 1                          | 673                          | 59                  | 99                          | 344                  | 1150                   | 3125                       | 2019.09      |
+| @ChnEmbassy\_jp   | Embassy of the P.R.C. in Tokyo, Japan                                                                                                                             | 91103\*   | 774\*      | 1110                      | 7                          | 500                          | 103                 | 27                          | 168                  | 1610                   | 5172                       | 2014.04      |
+| @ChnMission       | LIU Yuyin, Spokesperson, Permanent Representative of the P.R.C. to the U.N. office in Geneva, Switzerland                                                         | 1011      | 97         | 11                        | 10                         | 189                          | 178                 | 0                           | 22                   | 200                    | 1158                       | 2020.01      |
+| @consulat\_de     | Consulate General of the P.R.C. in Strasbourg, France                                                                                                             | 955       | 361        | 565                       | 6                          | 1412                         | 513                 | 1631                        | 1642                 | 1977                   | 2482                       | 2020.02      |
+| @GeneralkonsulDu  | DU Xiaohui, Consul General, Consulate General of the P.R.C. to Hamburg, Germany                                                                                   | 1581      | 85         | 291                       | 23                         | 325                          | 102                 | 292                         | 405                  | 616                    | 690                        | 2020.02      |
+| @MFA\_China       | Ministry of Foreign Affairs, Beijing, P.R.C.                                                                                                                      | 298033    | 160        | 1630                      | 1595                       | 1754                         | 1234                | 636                         | 1222                 | 3384                   | 4177                       | 2019.01      |
+| @SpokespersonCHN  | HUA Chunying, Spokesperson & Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C.                                               | 894507    | 159        | 2223                      | 2042                       | 132                          | 122                 | 2136                        | 100                  | 2355                   | 3522                       | 2019.01      |
+| @SpokespersonHZM  | HU Zhaoming, Spokesperson & Director General, Bureau of Public Information and Communication, International Department, C.P.C. Central Committee, Beijing, P.R.C. | 7707      | 35         | 97                        | 97                         | 0                            | 0                   | 13                          | 0                    | 97                     | 150                        | 2020.04      |
+| @zlj517           | ZHAO Lijian, Spokesperson & Deputy Director General, Information Department, Ministry of Foreign Affairs, Beijing, P.R.C.                                         | 960093    | 174492     | 1665                      | 1598                       | 9081                         | 8423                | 326                         | 8506                 | 10746                  | 65400                      | 2010.05      |
 
-(*) information gathered 25.02.2022, whereas the rest was gathered 21.06.2021
 
-#### Table x: Media
-| @handle          | User                                                     | Followers | Followings | Original tweets in period | Retweets by handle in period | Total tweets in period | Total tweets since created | Date created |
-| ---------------- | -------------------------------------------------------- | --------- | ---------- | ------------------------- | ---------------------------- | ---------------------- | -------------------------- | ------------ |
-| @CGTNOfficial    | China Global Television Network (CGTN)                   | 13528250  | 70         | 43984                     | 12825                        | 56809                  | 174500                     | 2013.01      |
-| @chenweihua      | CHEN Weihua, China Daily E.U. Bureau Chief and columnist | 98677     | 2814       | 9417                      | 12349                        | 21766                  | 38400                      | 2009.11      |
-| @ChinaDaily      | China Daily                                              | 4284437   | 537        | 38412                     | 1649                         | 40061                  | 152400                     | 2009.11      |
-| @CNS1952         | China News Service                                       | 475273    | 146        | N/A                       | N/A                          | N/A                    | 59000                      | 2013.07      |
-| @globaltimesnews | Global Times                                             | 1870039   | 520        | 58646                     | 568                          | 59214                  | 191100                     | 2009.06      |
-| @HuXijin\_GT     | HU Xijin, Global Times Editor-in-chief                   | 439720    | 670        | 880                       | 14                           | 894                    | 2551                       | 2014.08      |
-| @PDChina         | People's Daily                                           | 6928270   | 4360       | 17933                     | 93                           | 18026                  | 99400                      | 2011.05      |
-| @PDChinese       | People's Daily (Chinese)                                 | 753245    | 332        | N/A                       | N/A                          | N/A                    | 52300                      | 2013.06      |
-| @QiushiJournal   | Qiushi Journal                                           | 1691      | 158        | 128                       | 0                            | 128                    | 388                        | 2020.05      |
-| @shen\_shiwei    | SHEN Shiwei, CGTN News Producer                          | 36485     | 4956       | 4554                      | 357                          | 4911                   | 6902                       | 2012.05      |
-| @XinWen\_Ch      | Voice of China                                           | 4242      | 1221       | 140                       | 26                           | 166                    | 3793                       | 2019.12      |
-| @XHNews          | Xinhua News                                              | 12395089  | 65         | 40019                     | 26                           | 40045                  | 202300                     | 2012.02      |
+(*) metadata retrieved on 25.02.2022, whereas the rest were retrieved on 21.06.2021
+
+#### Table 3: Media
+| @handle          | User                                                     | Followers | Followings | Original tweets in period | Original tweets in English | Retweets by handle in period | Retweets in English | Hashtags in original tweets | Hashtags in retweets | Total tweets in period | Total tweets since created | Date created |
+| ---------------- | -------------------------------------------------------- | --------- | ---------- | ------------------------- | -------------------------- | ---------------------------- | ------------------- | --------------------------- | -------------------- | ---------------------- | -------------------------- | ------------ |
+| @CGTNOfficial    | China Global Television Network (CGTN)                   | 13528250  | 70         | 44640                     | 43984                      | 12883                        | 12825               | 44498                       | 7598                 | 57523                  | 174500                     | 2013.01      |
+| @chenweihua      | CHEN Weihua, China Daily E.U. Bureau Chief and columnist | 98677     | 2814       | 10015                     | 9417                       | 12768                        | 12349               | 0                           | 4436                 | 22783                  | 38400                      | 2009.11      |
+| @ChinaDaily      | China Daily                                              | 4284437   | 537        | 38612                     | 38412                      | 1658                         | 1649                | 69934                       | 3343                 | 40270                  | 152400                     | 2009.11      |
+| @CNS1952         | China News Service                                       | 475273    | 146        | 20204                     | 0                          | 3                            | 0                   | 4877                        | 1                    | 20207                  | 59000                      | 2013.07      |
+| @globaltimesnews | Global Times                                             | 1870039   | 520        | 59120                     | 58646                      | 573                          | 568                 | 80108                       | 794                  | 59693                  | 191100                     | 2009.06      |
+| @HuXijin\_GT     | HU Xijin, Global Times Editor-in-chief                   | 439720    | 670        | 880                       | 880                        | 14                           | 14                  | 2                           | 18                   | 894                    | 2551                       | 2014.08      |
+| @PDChina         | People's Daily                                           | 6928270   | 4360       | 17972                     | 17933                      | 93                           | 93                  | 18144                       | 111                  | 18065                  | 99400                      | 2011.05      |
+| @PDChinese       | People's Daily (Chinese)                                 | 753245    | 332        | 13577                     | 0                          | 0                            | 0                   | 3851                        | 0                    | 13577                  | 52300                      | 2013.06      |
+| @QiushiJournal   | Qiushi Journal                                           | 1691      | 158        | 133                       | 128                        | 0                            | 0                   | 352                         | 0                    | 133                    | 388                        | 2020.05      |
+| @shen\_shiwei    | SHEN Shiwei, CGTN News Producer                          | 36485     | 4956       | 4922                      | 4554                       | 377                          | 357                 | 9740                        | 398                  | 5299                   | 6902                       | 2012.05      |
+| @XHNews          | Xinhua News                                              | 12395089  | 65         | 40199                     | 40019                      | 29                           | 29                  | 21828                       | 10                   | 40228                  | 202300                     | 2012.02      |
+| @XinWen\_Ch      | Voice of China                                           | 4242      | 1221       | 3304                      | 140                        | 316                          | 26                  | 208                         | 79                   | 3620                   | 3793                       | 2019.12      |
+
+
+
+#### Table 4a: Popular hashtags in original tweets from MFA and SCIO 
+| Hashtags             | Number of cases |
+| -------------------- | --------------- |
+| #covid19             | 772             |
+| #china               | 484             |
+| #us                  | 342             |
+| #xinjiang            | 162             |
+| #pressroomhighlights | 159             |
+| #coronavirus         | 141             |
+| #poverty             | 116             |
+| #wuhan               | 98              |
+| #hongkong            | 91              |
+| #beijing             | 71              |
+| #trade               | 67              |
+| #5g                  | 60              |
+| #tibet               | 59              |
+| #pompeo              | 56              |
+| #beltandroad         | 54              |
+| #vaccines            | 51              |
+| #economy             | 47              |
+| #springfestival      | 44              |
+| #xijinping           | 41              |
+| #un                  | 38              |
+| #twosessions         | 37              |
+| #cpc                 | 36              |
+| #ciie                | 34              |
+| #humanrights         | 34              |
+| #nationalsecurity    | 33              |
+| #who                 | 33              |
+| #vaccine             | 32              |
+| #economic            | 31              |
+| #gdp                 | 31              |
+| #multilateralism     | 31              |
+
+
+#### Table 4b: Popular hashtags in original tweets from embassies, ambassadors and missions
+| Hashtags                               | Number of cases |
+| -------------------------------------- | --------------- |
+| #covid19                               | 2612            |
+| #china                                 | 1935            |
+| #xinjiang                              | 633             |
+| #coronavirus                           | 599             |
+| #chine                                 | 514             |
+| #cina                                  | 485             |
+| #hongkong                              | 450             |
+| #wuhan                                 | 278             |
+| #xijinping                             | 247             |
+| #ç•…æ¸¸å‹åŸŽ                          | 176             |
+| #covid                                 | 172             |
+| #voyagezdanslesvilleschinoisesjumelées | 171             |
+| #us                                    | 159             |
+| #covid\_19                             | 152             |
+| #beijing                               | 138             |
+| #5g                                    | 136             |
+| #ciie                                  | 131             |
+| #xizang                                | 124             |
+| #shanghai                              | 115             |
+| #nationalsecuritylaw                   | 114             |
+| #é­…åŠ›ç–†è—                          | 102             |
+| #who                                   | 100             |
+| #uk                                    | 98              |
+| #covidãƒ¼19                            | 90              |
+| #jiangsu                               | 90              |
+| #chinese                               | 89              |
+| #multilateralism                       | 89              |
+| #climatechange                         | 85              |
+| #hksar                                 | 85              |
+| #forzacinaitalia                       | 83              |
+
+
+
+
+
+
+
+
 
 ## Extract data
 The code used for creating dataframes from the JSON files can be found in the `extract_data folder`. 
