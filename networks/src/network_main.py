@@ -207,14 +207,15 @@ def main(n_labels, infile, outfolder):
     ''' mentions '''
     edge_mult = 4.5
     print('--> generating mentions plot')
-    node_divisor = 600*12
+    node_divisor = 600*15
     edge_divisor = 100*edge_mult
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
     nudge_triple = [
         ('MFA_China', 0, 0.1),
         ('AmbassadeChine', 0, 0.05),
-        ('PDChina', 0, 0.05)
+        ('PDChina', 0, 0.05),
+        ('ChnMission', 0, 0.05)
         ] 
 
     plot_network(
@@ -262,7 +263,7 @@ def main(n_labels, infile, outfolder):
 
     ## weighted degree 
     print('--> generating weighted degree plot')
-    node_divisor = 2.5*8
+    node_divisor = 2.5*9
     edge_divisor = 100*edge_mult
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors weighted)'
     filename = 'network_focus_weighted_degree'
