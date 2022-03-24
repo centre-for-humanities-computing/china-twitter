@@ -176,7 +176,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 <img src="https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png" width="1000" height="1000">
 
 #### Figure 6
-<img src="https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.pdf" width="500" height="500">
+
 
 #### Figure 7
 

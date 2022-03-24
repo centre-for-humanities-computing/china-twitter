@@ -105,7 +105,7 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
     '''
 
     # setup 
-    fig, ax = plt.subplots(figsize=(5, 5), dpi=100, facecolor='w', edgecolor='k')
+    fig, ax = plt.subplots(figsize=(5, 5), dpi=300, facecolor='w', edgecolor='k')
     plt.axis("off")
 
     # position & manual tweaking
