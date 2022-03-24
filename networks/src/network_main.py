@@ -129,7 +129,7 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
     lines, labels = get_legend(node_size, color_dct)
     fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 8, title_fontsize = 9, frameon = False)
     plt.tight_layout()
-    plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.pdf", bbox_inches='tight')
+    plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
 def main(n_labels, infile, outfolder): 
 
