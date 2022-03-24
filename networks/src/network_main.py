@@ -38,16 +38,37 @@ def get_labels(G, type_str, type_lst, n_labels):
     n_labels: <int> number of labels
     '''
     # sort list and take top 
+    focus_handles = [
+        'XHNews', 
+        'CGTNOfficial', 
+        'ChinaDaily', 
+        'globaltimesnews',  
+        'SpokespersonCHN', 
+        'MFA_China',
+        'zlj517',
+        #'PDChina', 
+        #'AmbLiuXiaoMing', 
+        #'AmbCuiTianKai',
+        #'HuXijin_GT',
+        #'CNS51952',
+        #'ChnEmbassy_jp'
+    ]
+    
     lst_sorted = sorted(type_lst, reverse=True)
     cutoff = lst_sorted[n_labels]
     
     # loop over them and assign labels to greater than cutoff 
     labels = nx.get_node_attributes(G, type_str)
     labeldict = {}
+
     for key, val in labels.items(): 
 
-        if val > cutoff: 
+        if key in focus_handles: 
             labeldict[key] = key
+
+        elif val > cutoff: 
+            labeldict[key] = key
+        
         else: 
             labeldict[key] = ''
     
@@ -71,7 +92,7 @@ def nudge_position(pos, nudge_triple):
     return pos
 
 #### plot 1 ####
-def plot_network(G, color_dct, node_color, edge_color, labeldict, node_size_lst, edge_width_lst, node_divisor, edge_divisor, title, filename, outfolder, seed = 6, nudge_triple = False): 
+def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict, node_size_lst, edge_width_lst, node_divisor, edge_divisor, title, filename, outfolder, seed = 8, k = 2, nudge_triple = False): 
 
     '''
     G: <networkx.classes.digraph.DiGraph> the graph
@@ -88,7 +109,7 @@ def plot_network(G, color_dct, node_color, edge_color, labeldict, node_size_lst,
     plt.axis("off")
 
     # position & manual tweaking
-    pos = nx.spring_layout(G, k=2, iterations=30, seed=seed)
+    pos = nx.spring_layout(G, k=k, iterations=30, seed=seed)
     if nudge_triple: 
         pos = nudge_position(pos, nudge_triple)
 
@@ -97,21 +118,24 @@ def plot_network(G, color_dct, node_color, edge_color, labeldict, node_size_lst,
     edge_width =  [x/edge_divisor for x in edge_width_lst]
 
     # draw it 
-    nx.draw_networkx_nodes(G, pos, node_size=node_size, node_color=node_color) #, node_size = node_size, node_color = node_color)
+    nx.draw_networkx_nodes(G, pos, node_size=node_size, node_color=node_color, edgecolors = nodeedge_color) #, node_size = node_size, node_color = node_color)
     nx.draw_networkx_edges(G, pos, width = edge_width, alpha = 0.5, edge_color = edge_color, arrows=False)
 
     # labels 
-    label_options = {"ec": "k", "fc": "white", "alpha": 0.7}
-    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=12, bbox=label_options)
+    label_options = {"edgecolor": "none", "facecolor": "white", "alpha": 0}
+    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=12, bbox=label_options, font_weight = 'bold')
 
     # formatting & save
     lines, labels = get_legend(node_size, color_dct)
-    fig.legend(lines, labels, title = "Node Category", bbox_to_anchor=(0.2, 0.9), labelspacing=1.2, fontsize=16, title_fontsize=20) # bbox_to_anchor=(0.3, 0.9)
-    plt.suptitle(f'{title}', size=25)
+    fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 18, title_fontsize = 20, frameon = False)
     plt.tight_layout()
-    plt.savefig(f"{outfolder}/{filename}{seed}.png", bbox_inches='tight')
+    plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
 def main(n_labels, infile, outfolder): 
+
+    ''' vars '''
+    seed = 11
+    k = 1.8
 
     ''' setup '''
     print('--- starting: visualize networks')
@@ -136,8 +160,10 @@ def main(n_labels, infile, outfolder):
     mentions_category = dict(zip(mentions_category.node, mentions_category.category))
     nx.set_node_attributes(G, mentions_category, "category")
     category = nx.get_node_attributes(G, 'category').values()
-    colors = {'Diplomat': 'tab:blue', 'Media': 'tab:orange'}
-    node_color = [colors.get(x) for x in category]
+    c_node = {'Diplomat': '#6baed6', 'Media': '#fd8d3c'} # blue: https://www.color-hex.com/color-palette/17597 , orange: https://www.color-hex.com/color-palette/17665
+    c_nodeedge = {'Diplomat': '#2171b5', 'Media': '#d94701'} #blue: https://www.color-hex.com/color-palette/17597 , orange: https://www.color-hex.com/color-palette/17665
+    node_color = [c_node.get(x) for x in category] 
+    node_edgecolor = [c_nodeedge.get(x) for x in category]
 
     # size: based on mentions in total dataset. 
     G_nodes = list(G.nodes())
@@ -145,7 +171,7 @@ def main(n_labels, infile, outfolder):
     mentionee_size = size_frame[size_frame["mentionee"].isin(G_nodes)]
     mentionee_size_dct = dict(zip(mentionee_size.mentionee, mentionee_size.mentions))
     nx.set_node_attributes(G, mentionee_size_dct, "mentions")
-    mentions = nx.get_node_attributes(G, 'mentions').values() # 35- not 40, how?
+    mentions = nx.get_node_attributes(G, 'mentions').values() 
 
     unweighted_degree = degree_information(G, G.degree(weight=None), "unweighted_degree")
     weighted_degree = degree_information(G, G.degree(weight='weight'), "weighted_degree")
@@ -158,7 +184,7 @@ def main(n_labels, infile, outfolder):
     labeldict_unweighted_degree = get_labels(G, 'unweighted_degree', unweighted_degree, n_labels)
     labeldict_weighted_degree = get_labels(G, 'weighted_degree', weighted_degree, n_labels)
     labeldict_in_degree = get_labels(G, 'in_degree', in_degree, n_labels)
-    labeldict_out_degree = get_labels(G, 'out_degree', out_degree, n_labels)
+    labeldict_out_degree = get_labels(G, 'out_degree', out_degree, n_labels - 4) # special treatment
 
     # edge color 
     for i, j in G.edges():
@@ -166,10 +192,10 @@ def main(n_labels, infile, outfolder):
         j_cat = G.nodes[j]["category"]
 
         if i_cat == 'Diplomat' and j_cat == 'Diplomat':
-            edge_col = colors.get('Diplomat')
+            edge_col = c_node.get('Diplomat')
         
         elif i_cat == 'Media' and j_cat == 'Media': 
-            edge_col = colors.get('Media')
+            edge_col = c_node.get('Media')
 
         else: 
             edge_col = 'tab:grey'
@@ -184,21 +210,17 @@ def main(n_labels, infile, outfolder):
     edge_divisor = 100
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
-    #nudge_triple = [
-        #('MFA_China', 0.05, -0.05), 
-        #('ChinaAmbUN', 0, 0.1), 
-        #('ChinaAmbGermany', 0.15, 0),
-        #('ChineseEmbinUK', 0.05, -0.05),
-        #('consulat_de', 0, 0.05),
-        #('CHN_UN_NY', -0.05, 0),
-        #('ChnMission', 0, 0.05),
-        #('ChinaMissionGva', 0, 0.05),
-        #('Chinamission2un', 0, 0.05)]
+    nudge_triple = [
+        ('MFA_China', 0, 0.1),
+        ('AmbassadeChine', 0, 0.05),
+        ('PDChina', 0, 0.05)
+        ] 
 
     plot_network(
         G = G, 
-        color_dct = colors,
+        color_dct = c_node,
         node_color = node_color,
+        nodeedge_color = node_edgecolor,
         edge_color = edge_color,
         labeldict = labeldict_mentions,
         node_size_lst = mentions, 
@@ -207,9 +229,10 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder)
-        #seed = seed,
-        #nudge_triple = nudge_triple)
+        outfolder = outfolder,
+        k = k,
+        seed = seed,
+        nudge_triple = nudge_triple)
 
     ## unweighted degree
     print('--> generating unweighted degree plot')
@@ -220,8 +243,9 @@ def main(n_labels, infile, outfolder):
 
     plot_network(
         G = G, 
-        color_dct = colors,
+        color_dct = c_node,
         node_color = node_color,
+        nodeedge_color = node_edgecolor,
         edge_color = edge_color,
         labeldict = labeldict_unweighted_degree,
         node_size_lst = unweighted_degree, 
@@ -230,9 +254,10 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder)
-        #nudge_triple = nudge_triple)
-        #nudge_triple = nudge_triple)
+        outfolder = outfolder,
+        k = k,
+        seed = seed,
+        nudge_triple = nudge_triple)
 
     ## weighted degree 
     print('--> generating weighted degree plot')
@@ -243,8 +268,9 @@ def main(n_labels, infile, outfolder):
 
     plot_network(
         G = G, 
-        color_dct = colors,
+        color_dct = c_node,
         node_color = node_color,
+        nodeedge_color = node_edgecolor,
         edge_color = edge_color,
         labeldict = labeldict_weighted_degree,
         node_size_lst = weighted_degree, 
@@ -253,9 +279,10 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder)
-        #nudge_triple = nudge_triple)
-        #nudge_triple = nudge_triple)
+        outfolder = outfolder,
+        k = k,
+        seed = seed,
+        nudge_triple = nudge_triple)
 
     ''' in-degree '''
     print('--> generating in-degree plot')
@@ -266,8 +293,9 @@ def main(n_labels, infile, outfolder):
 
     plot_network(
         G = G, 
-        color_dct = colors,
-        node_color  =node_color,
+        color_dct = c_node,
+        node_color = node_color,
+        nodeedge_color = node_edgecolor,
         edge_color = edge_color,
         labeldict = labeldict_in_degree,
         node_size_lst = in_degree, 
@@ -276,9 +304,10 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder)
-        #nudge_triple = nudge_triple)
-        #nudge_triple = nudge_triple)
+        outfolder = outfolder,
+        k = k,
+        seed = seed,
+        nudge_triple = nudge_triple)
 
     ## out-degree
     print('--> generating out-degree plot')
@@ -289,8 +318,9 @@ def main(n_labels, infile, outfolder):
 
     plot_network(
         G = G, 
-        color_dct = colors,
+        color_dct = c_node,
         node_color = node_color,
+        nodeedge_color = node_edgecolor,
         edge_color = edge_color,
         labeldict = labeldict_out_degree,
         node_size_lst = out_degree, 
@@ -299,9 +329,10 @@ def main(n_labels, infile, outfolder):
         edge_divisor = edge_divisor,
         title = title,
         filename = filename,
-        outfolder = outfolder)
-        #nudge_triple = nudge_triple)
-        #nudge_triple = nudge_triple)
+        outfolder = outfolder,
+        k = k,
+        seed = seed,
+        nudge_triple = nudge_triple)
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
