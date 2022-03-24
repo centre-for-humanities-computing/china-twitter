@@ -231,16 +231,16 @@ insert: china-twitter/topic-model/plots/topic_model_diplomat.html
 insert: china-twitter/topic-model/plots/topic_model_media.html
 
 #### Figure 8a
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/topic-model/plots/topics_over_time_1_7.png)
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topics_over_time_1_7.png)
 
 #### Figure 8b
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/topic-model/plots/topics_over_time_8_14.png)
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topics_over_time_8_14.png)
 
 #### Figure 8c
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/topic-model/plots/topics_over_time_15_22.png)
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topics_over_time_15_22.png)
 
 #### Figure 8d
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/topic-model/plots/topics_over_time_23_30.png)
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topics_over_time_23_30.png)
 
 
 
