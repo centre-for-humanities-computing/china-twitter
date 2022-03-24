@@ -7,8 +7,8 @@ python -m ipykernel install --user --name $VENVNAME --display-name "$VENVNAME"
 
 # what to run
 PRE=false
-NET=true 
-SUM=false 
+NET=false 
+SUM=true 
 
 # run preprocessing 
 if [ $PRE = true ]
@@ -38,7 +38,7 @@ then
 		-out /work/cn-some/china-twitter/networks/fig/stats
 
 	# summary stats (global)
-	python /work/cn-some/china-twitter/networks/src/summary_stats.py \
-		-in  /work/cn-some/china-twitter/networks/data/clean/df_full.csv \
-		-out /work/cn-some/china-twitter/networks/fig/stats
+	#python /work/cn-some/china-twitter/networks/src/summary_stats.py \
+	#	-in  /work/cn-some/china-twitter/networks/data/clean/df_full.csv \
+	#	-out /work/cn-some/china-twitter/networks/fig/stats
 fi 

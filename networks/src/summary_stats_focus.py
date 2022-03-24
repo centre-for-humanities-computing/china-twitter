@@ -11,6 +11,7 @@ import numpy as np
 import networkx as nx 
 import matplotlib.pyplot as plt
 import argparse 
+from matplotlib.lines import Line2D
 
 # plot 
 def plot_summary(df, id_col, measure_col, n, title, xlab, ylab, outpath, outname): 
@@ -64,6 +65,19 @@ def main(infile, outpath):
     df_plot = df_merged[["id", "in_degree", "out_degree"]].head(10)
     df_plot.index = df_plot["id"]
     df_plot.plot.bar(stacked=True)
+
+    #    lines = [Line2D([0], [0], linewidth=0, markersize = math.sqrt(node_median), color = colors_dct.get('Diplomat'), marker='o'), 
+    #        Line2D([0], [0], linewidth=0, markersize = math.sqrt(node_median), color = colors_dct.get('Media'), marker='o')] 
+    #labels = ['Diplomat', 'Media']
+
+
+    lines = [
+        Line2D([0], [0], color = 'tab:blue', markersize = 2),
+        Line2D([0], [0], color = 'tab:orange', markersize = 2)]
+
+    labels = ['In-degree', 'Out-degree'] # in-degree blue, out-degree orange
+
+    plt.legend(lines, labels, frameon = False)
     plt.title('Top 10 degree (sub-network)')
     plt.xlabel('Handle')
     plt.ylabel('Degree')
