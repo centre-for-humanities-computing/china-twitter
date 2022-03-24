@@ -105,7 +105,7 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
     '''
 
     # setup 
-    fig, ax = plt.subplots(figsize=(5, 5), dpi=300, facecolor='w', edgecolor='k')
+    fig, ax = plt.subplots(figsize=(3, 3), dpi=300, facecolor='w', edgecolor='k')
     plt.axis("off")
 
     # position & manual tweaking
@@ -123,11 +123,11 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
 
     # labels 
     label_options = {"edgecolor": "none", "facecolor": "white", "alpha": 0}
-    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=5, bbox=label_options, font_weight = 'bold')
+    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=4, bbox=label_options, font_weight = 'bold')
 
     # formatting & save
     lines, labels = get_legend(node_size, color_dct)
-    fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 8, title_fontsize = 9, frameon = False)
+    fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 6, frameon = False)
     plt.tight_layout()
     plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
@@ -206,8 +206,8 @@ def main(n_labels, infile, outfolder):
 
     ''' mentions '''
     print('--> generating mentions plot')
-    node_divisor = 600
-    edge_divisor = 100
+    node_divisor = 600*10
+    edge_divisor = 100*10
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
     nudge_triple = [
@@ -236,8 +236,8 @@ def main(n_labels, infile, outfolder):
 
     ## unweighted degree
     print('--> generating unweighted degree plot')
-    node_divisor = 0.05
-    edge_divisor = 100
+    node_divisor = 0.05*10
+    edge_divisor = 100*10
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors)'
     filename = 'network_focus_unweighted_degree'
 
@@ -261,8 +261,8 @@ def main(n_labels, infile, outfolder):
 
     ## weighted degree 
     print('--> generating weighted degree plot')
-    node_divisor = 2.5
-    edge_divisor = 100
+    node_divisor = 2.5*10
+    edge_divisor = 100*10
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors weighted)'
     filename = 'network_focus_weighted_degree'
 
@@ -286,8 +286,8 @@ def main(n_labels, infile, outfolder):
 
     ''' in-degree '''
     print('--> generating in-degree plot')
-    node_divisor = 1.5
-    edge_divisor = 100
+    node_divisor = 1.5*10
+    edge_divisor = 100*10
     title = 'Diplomats and Media sub-network (nodesize: in-degree -- inwards)'
     filename = 'network_focus_in_degree'
 
@@ -311,8 +311,8 @@ def main(n_labels, infile, outfolder):
 
     ## out-degree
     print('--> generating out-degree plot')
-    node_divisor = 1.5
-    edge_divisor = 100
+    node_divisor = 1.5*10
+    edge_divisor = 100*10
     title = 'Diplomats and Media sub-network (nodesize: out-degree -- outwards)'
     filename = 'network_focus_out_degree'
 
