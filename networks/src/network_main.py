@@ -105,7 +105,7 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
     '''
 
     # setup 
-    fig, ax = plt.subplots(figsize=(12, 12), dpi=200, facecolor='w', edgecolor='k')
+    fig, ax = plt.subplots(figsize=(5, 5), dpi=300, facecolor='w', edgecolor='k')
     plt.axis("off")
 
     # position & manual tweaking
@@ -123,13 +123,13 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
 
     # labels 
     label_options = {"edgecolor": "none", "facecolor": "white", "alpha": 0}
-    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=12, bbox=label_options, font_weight = 'bold')
+    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=5, bbox=label_options, font_weight = 'bold')
 
     # formatting & save
     lines, labels = get_legend(node_size, color_dct)
-    fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 18, title_fontsize = 20, frameon = False)
+    fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 8, title_fontsize = 9, frameon = False)
     plt.tight_layout()
-    plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.pdf", bbox_inches='tight')
+    plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
 def main(n_labels, infile, outfolder): 
 
