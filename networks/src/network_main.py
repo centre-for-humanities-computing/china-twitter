@@ -123,7 +123,7 @@ def plot_network(G, color_dct, node_color, nodeedge_color, edge_color, labeldict
 
     # labels 
     label_options = {"edgecolor": "none", "facecolor": "white", "alpha": 0}
-    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=3.5, bbox=label_options, font_weight = 'bold')
+    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=3, bbox=label_options, font_weight = 'bold')
 
     # formatting & save
     lines, labels = get_legend(node_size, color_dct)
@@ -206,8 +206,8 @@ def main(n_labels, infile, outfolder):
 
     ''' mentions '''
     print('--> generating mentions plot')
-    node_divisor = 600*8
-    edge_divisor = 100*8
+    node_divisor = 600*12
+    edge_divisor = 100*6
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
     nudge_triple = [
@@ -237,7 +237,7 @@ def main(n_labels, infile, outfolder):
     ## unweighted degree
     print('--> generating unweighted degree plot')
     node_divisor = 0.05*8
-    edge_divisor = 100*8
+    edge_divisor = 100*6
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors)'
     filename = 'network_focus_unweighted_degree'
 
@@ -262,7 +262,7 @@ def main(n_labels, infile, outfolder):
     ## weighted degree 
     print('--> generating weighted degree plot')
     node_divisor = 2.5*8
-    edge_divisor = 100*8
+    edge_divisor = 100*6
     title = 'Diplomats and Media sub-network (nodesize: number of neighbors weighted)'
     filename = 'network_focus_weighted_degree'
 
@@ -287,7 +287,7 @@ def main(n_labels, infile, outfolder):
     ''' in-degree '''
     print('--> generating in-degree plot')
     node_divisor = 1.5*8
-    edge_divisor = 100*8
+    edge_divisor = 100*6
     title = 'Diplomats and Media sub-network (nodesize: in-degree -- inwards)'
     filename = 'network_focus_in_degree'
 
@@ -312,7 +312,7 @@ def main(n_labels, infile, outfolder):
     ## out-degree
     print('--> generating out-degree plot')
     node_divisor = 1.5*8
-    edge_divisor = 100*8
+    edge_divisor = 100*6
     title = 'Diplomats and Media sub-network (nodesize: out-degree -- outwards)'
     filename = 'network_focus_out_degree'
 
