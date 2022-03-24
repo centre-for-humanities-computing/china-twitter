@@ -1,6 +1,9 @@
 The code for recreating the analysis for the paper (insert paper title here).
 
 For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
+
+### Tables
+
 #### Table 1
 | Data collection                                                               |                            |
 | ----------------------------------------------------------------------------- | -------------------------- |
@@ -82,7 +85,9 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 
 
-#### Table 4a: Popular hashtags in original tweets from MFA and SCIO 
+#### Table 4: Followings within the network (?)
+
+#### Table 5a: Popular hashtags in original tweets from MFA and SCIO 
 | Hashtags             | Number of cases |
 | -------------------- | --------------- |
 | #covid19             | 772             |
@@ -117,7 +122,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 | #multilateralism     | 31              |
 
 
-#### Table 4b: Popular hashtags in original tweets from embassies, ambassadors and missions
+#### Table 5b: Popular hashtags in original tweets from embassies, ambassadors and missions
 | Hashtags                               | Number of cases |
 | -------------------------------------- | --------------- |
 | #covid19                               | 2612            |
@@ -153,7 +158,30 @@ For the purpose of this study data was collected from select twitter accounts, r
 
 
 
+### Figures 
 
+#### Figure 1
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png?raw=true)
+
+#### Figure 2
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png)
+#### Figure 3
+
+#### Figure 4
+
+#### Figure 5
+
+#### Figure 6
+
+#### Figure 7
+
+#### Figure 8a
+
+#### Figure 8b
+
+#### Figure 8c
+
+#### Figure 8d
 
 
 
