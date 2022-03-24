@@ -210,22 +210,20 @@ For the purpose of this study data was collected from select twitter accounts, r
 ### Figures 
 
 #### Figure 1
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png?raw=true)
 
 #### Figure 2
-
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_mentions_seed11_k1.8.png?raw=true)
 
 #### Figure 3
-<img src="https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png" width="750" height="750">
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_weighted_degree_seed11_k1.8.png?raw=true)
 
 #### Figure 4
-<img src="https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png" width="200" height="200">
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png?raw=true)
 
 #### Figure 5
-<img src="https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png" width="1000" height="1000">
+![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_out_degree_seed11_k1.8.png?raw=true)
 
 #### Figure 6
-
 
 #### Figure 7
 
