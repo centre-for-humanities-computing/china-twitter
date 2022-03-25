@@ -1,8 +1,7 @@
 '''
-VMP 2022-02-18: 
-Is used in the analysis.
-Degree of top actors in whole network. 
-Run on df_clean
+VMP 2022-03-25: 
+Analysis basic stats for the whole network (with non-diplomat and non-media)
+Not currently used in the paper. 
 '''
 
 # imports 
