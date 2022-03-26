@@ -363,9 +363,9 @@ bash main.sh
 ```
 
 in main.sh set: 
-PRE=true
-NET=true 
-SUM=true
+PRE=true <br/>
+NET=true <br/>
+SUM=true <br/>
 
 This ensures that the bash script calls (runs) 
 1. preprocessing (```concat_files.py```)
