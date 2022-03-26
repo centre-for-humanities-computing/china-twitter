@@ -225,10 +225,8 @@ For the purpose of this study data was collected from select twitter accounts, r
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_out_degree_seed11_k1.8.png)
 
 #### Figure 6 open [here](http://htmlpreview.github.io/?https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topic_model_diplomat.html)
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topic_diplomats.png)
 
-#### Figure 7
-![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topic_media.png)
+#### Figure 7 open [here](http://htmlpreview.github.io/?https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topic_model_media.html)
 
 #### Figure 8a
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topics_over_time_1_7.png)
