@@ -338,39 +338,39 @@ Nodes in the networks are Twitter handles and edges (connections) are weighted b
 The network visualization only plots Twitter handles that are either flagged as Chinese diplomats or Chinese media outlets, but uses the number of mentions from other twitter users to scale node-size in one network visualization (see below). 
 The *edgewidth* (strength of connections) is determined by the number of bi-directional mentions between Twitter handles of Chinese diplomats and media outlets. 
 The *nodesize* (size of handle) is determined by various attributes, such as: 
-* *unweighted degree*: node-size scaled by the number of unique connections between Twitter handle in question and other Chinese diplomats and media outlets (both directions counted). 
-* *weighted degree*: node-size scaled by number of total number of connections  between Twitter handle in question and other Chinese diplomats and media outlets (both directions counted, and each mention counted). 
-* *in-degree*: number of mentions from other Chinese diplomats and media outlets to the Twitter handle in question (only one direction counted).
-* *out-degree*: number of mentions from the Twitter handle in question to other Chinese diplomats and media outlets (only one direction counted).
-* *total mentions*: number of total mentions to the Twitter handle in question from all users (also non-diplomats and non-media). This shows how "popular" the Chinese diplomats and media outlets are on Twitter broadly, rather than just their popularity/activity within the diplomat/media subset. 
+* *total mentions* (Figure 2): number of total mentions to the Twitter handle in question from all users (also non-diplomats and non-media). This shows how "popular" the Chinese diplomats and media outlets are on Twitter broadly, rather than just their popularity/activity within the diplomat/media subset. 
+* *weighted degree* (Figure 3): node-size scaled by number of total number of connections  between Twitter handle in question and other Chinese diplomats and media outlets (both directions counted, and each mention counted). 
+* *in-degree* (Figure 4): number of mentions from other Chinese diplomats and media outlets to the Twitter handle in question (only one direction counted).
+* *out-degree* (Figure 5): number of mentions from the Twitter handle in question to other Chinese diplomats and media outlets (only one direction counted).
 
 
 ### Usage:
-1. Navigate to network analysis folder: 
+1. Activate environment
 
 ```
-cd networks
+source cnenv/bin/activate
 ```
 
-2. Prepare data 
+2. Navigate to the network code folder
 ```
-python prep_semantic/create_subsets.py
-
-python prep_semantic/csv2txt.py -i data/text_diplomat.csv -o data/data_semantic/text_diplomat
-python prep_semantic/csv2txt.py -i data/text_diplomat_orig.csv -o data/data_semantic/text_diplomat_orig
+cd networks/src
 ```
 
+3. Run bash script
 
-3. Train model and generate graphs
-First time running make sure to set train to True
 ```
-run_diplomats.sh
-run_diplomats_orig.sh
+bash main.sh
 ```
 
+in main.sh set: 
+PRE=true
+NET=true 
+SUM=true
 
-4. Tweaking of parameters
-* Pruning can be set to none, soft, and hard
+This ensures that the bash script calls (runs) 
+1. preprocessing (```concat_files.py```)
+2. network visualizations (```network_main.py```) 
+3. summary data analysis (```summary_stats_focus.py```)
 
 
 
