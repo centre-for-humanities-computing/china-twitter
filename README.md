@@ -363,7 +363,7 @@ cd networks/src
 bash main.sh
 ```
 
-in main.sh set: <br/>
+in ```main.sh``` set: <br/>
 PRE=true <br/>
 NET=true <br/>
 SUM=true <br/>
