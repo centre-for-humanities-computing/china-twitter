@@ -244,7 +244,7 @@ For the purpose of this study data was collected from select twitter accounts, r
 The code used for creating dataframes from the JSON files can be found in the `extract_data folder`. 
 
 ## Topic model
-Latent Dirichlet Allocation topic modelling using LDA package in Python (See documentation:https://lda.readthedocs.io/en/latest/). 
+Latent Dirichlet Allocation topic modelling using `gensim` package in Python (See documentation: https://radimrehurek.com/gensim_3.8.3/models/ldamodel.html). 
 LDA is a hierarchical Bayesian model with three levels, in which each item of a collection, in this case tweets, is modeled as a finite mixture over an underlying set of topics. In turn, each topic is modeled as an infinite mixture over an underlying set of topic probabilities. An explicit representation of each tweet is provided by the topic probabilities. 
 
 A total of 180 models were trained for both diplomat and media tweets with a variation of the following three hyperparameters:
