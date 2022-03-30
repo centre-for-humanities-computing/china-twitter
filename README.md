@@ -1,7 +1,3 @@
-The code for recreating the analysis for the paper (insert paper title here).
-
-For the purpose of this study data was collected from select twitter accounts, respectively from Chinese diplomacy and Chinese state media propaganda.
-
 ### Tables
 
 #### Table 1: Dataset
