@@ -30,7 +30,7 @@ def subset_dates(df, filter_dates="True"):
 
     return df
 
-def main(inpath, outpath, outname, filter_dates = "True"): # , engine='python', error_bad_lines=False)
+def main(inpath, outpath, outname, filter_dates = "True", only_retweets = "False"): # , engine='python', error_bad_lines=False)
     print("--- starting: processing ---")
     onlyfiles = [f for f in listdir(inpath) if isfile(join(inpath, f))]
     
@@ -44,9 +44,16 @@ def main(inpath, outpath, outname, filter_dates = "True"): # , engine='python', 
             print(f"file fail: {file}")
     '''
     
+    # basic cleaning
     df_list = [pd.read_csv(f"{inpath}{onlyfile}") for onlyfile in onlyfiles] # Skipping line 556991: unexpected end of data
     df_gathered = pd.concat(df_list)
     df_clean = subset_dates(df_gathered, filter_dates)
+
+    # only retweets
+    if only_retweets == "True": 
+        df_clean = df_clean[df_clean["retweet"] == "retweeted"]
+        outname = "rt_" + outname 
+
     df_clean.to_csv(f"{outpath}{outname}", index = False)
     print("--- finished: preprocessing ---")
 
@@ -56,5 +63,11 @@ if __name__ == '__main__':
     ap.add_argument("-op", "--outpath", required=True, type=str, help='path to folder for saving output files (txt)')
     ap.add_argument('-on', "--outname", required=True, type=str, help='filename out')
     ap.add_argument("-f", "--filter_dates", required=False, type=str, default="True", help="subset dates (True) or not (False)")
+    ap.add_argument("-or", "--only_retweets", required=False, type = str, default="False", help = "only retweets or all?")
     args = vars(ap.parse_args())
-    main(inpath = args['inpath'], outpath = args['outpath'], outname = args['outname'], filter_dates = args["filter_dates"])
+    main(
+        inpath = args['inpath'], 
+        outpath = args['outpath'], 
+        outname = args['outname'], 
+        filter_dates = args["filter_dates"],
+        only_retweets = args["only_retweets"])

@@ -2,8 +2,6 @@ import pickle as pkl
 from gen_model import LDA_model #load previous function for LDA
 import pandas as pd
 
-with open(f"data/models/GridSearchLDA.pkl", "rb") as f:
-    data = pkl.load(f)
 
 ## Find best hyperparameters
 # media

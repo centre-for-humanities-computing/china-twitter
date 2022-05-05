@@ -189,7 +189,7 @@ def plot_network(G, nodelst, edgelst, color_dct, node_color, nodeedge_color, edg
     plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
 def main(n_labels, infile, outfolder): 
-
+    print(infile)
     ''' 1. vars '''
     seed = 11
     k = 1.8
@@ -296,14 +296,29 @@ def main(n_labels, infile, outfolder):
     edge_divisor = 100*edge_mult
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
-    nudge_triple = [
-        ('MFA_China', 0, 0.1),
-        ('AmbassadeChine', 0, 0.05),
-        ('PDChina', 0, 0.05),
-        ('ChnMission', -0.05, 0.1),
-        ('consulat_de', -0.05, 0),
-        ('chenweihua', -0.05, 0)
-        ] 
+    
+    ## fix the fact that we now have two files 
+    if infile == "/work/cn-some/china-twitter/networks/data/clean/df_full.csv":
+        nudge_triple = [ # nudge triple specifically for this data & seed
+            ('MFA_China', 0, 0.1),
+            ('AmbassadeChine', 0, 0.05),
+            ('PDChina', 0, 0.05),
+            ('ChnMission', -0.05, 0.1),
+            ('consulat_de', -0.05, 0),
+            ('chenweihua', -0.05, 0)
+            ] 
+    
+    if infile == "/work/cn-some/china-twitter/networks/data/clean/rt_df_full.csv":
+        nudge_triple = [ # nudge triple specifically for this data and seed
+            ('consulat_de', -0.05, 0),
+            ('Chinamission2un', 0.05, 0),
+            ('zlj517', -0.1, -0.05),
+            ('chenweihua', 0.05, 0.1),
+            ('SpokespersonCHN', 0.05, 0.05),
+            ('AmbassadeChine', -0.05, 0.05),
+            ('CHN_UN_NY', 0.05, -0.05),
+            ('PDChina', 0.05, 0.05)
+        ]
 
     plot_network(
         G = G, 
