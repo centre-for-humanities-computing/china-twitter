@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 import matplotlib.font_manager as font_manager
 import pickle as pkl
-import pyLDAvis.gensim as gm
+#import pyLDAvis.gensim as gm
 
 #%matplotlib inline
 from pandas.plotting import scatter_matrix
