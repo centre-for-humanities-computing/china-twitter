@@ -8,4 +8,11 @@ cnenv
 topic-model/data
 topic-model/theta/xin
 networks/data
-bot-detection
+bot-detection/curated_data
+bot-detection/data_test
+bot-detection/mdl
+bot-detection/datasets_full.csv
+bot-detection/mentiondata
+bot-detection/covid19.zip
+bot-detection/cresci-2017.csv.zip
+bot-detection/vaccination_all_tweets.csv
