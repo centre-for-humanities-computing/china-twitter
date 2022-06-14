@@ -16,7 +16,12 @@ len(d_full) # 26.321.014
 top_filtered = d_filtered.groupby('mentionee').size().reset_index(name = 'count').sort_values('count', ascending=False).head(10)
 top_full = d_full.groupby('mentionee').size().reset_index(name = 'count').sort_values('count', ascending=False).head(10)
 
+## ordering different: same handles
 top_filtered.head(10)
 top_full.head(10)
 
-## NB: ordering is different, but the top-10 is largely the same accounts. 
+# check dates
+d_filtered["created_at"].min() # good
+d_filtered["created_at"].max() # good 
+d_full["created_at"].min() # too early (the problem)
+d_full["created_at"].max() # good 
