@@ -28,6 +28,7 @@ def plot_summary(df, id_col, measure_col, n, title, xlab, ylab, outpath, outname
 def main(infile, outpath):
 
     print(f"--- starting: stats for sub ---")
+    print(f"outpath: {outpath}")
     # load 
     concat = pd.read_csv(f"{infile}")
 

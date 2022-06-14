@@ -8,7 +8,7 @@ python -m ipykernel install --user --name $VENVNAME --display-name "$VENVNAME"
 # what to run
 PRE=false
 NET=true 
-SUM=false 
+SUM=false
 
 # run preprocessing 
 if [ $PRE = true ]
@@ -16,16 +16,17 @@ then
 	python /work/cn-some/china-twitter/networks/src/concat_files.py \
 		-i /work/cn-some/china-twitter/networks/data/raw/ \
 		-op /work/cn-some/china-twitter/networks/data/clean/ \
-		-on df_full.csv \
-		-f False
+		-on df_filtered.csv \
+		-f True \
+		-or False 
 fi
 
 # plot networks
 if [ $NET = true ]
 then
 	python /work/cn-some/china-twitter/networks/src/network_main.py \
-		-in  /work/cn-some/china-twitter/networks/data/clean/df_full.csv \
-		-out /work/cn-some/china-twitter/networks/fig/networks \
+		-in  /work/cn-some/china-twitter/networks/data/clean/df_filtered.csv \
+		-out /work/cn-some/china-twitter/networks/fig/networks_filtered \
 		-n 12
 fi 
 
@@ -34,8 +35,8 @@ if [ $SUM = true ]
 then
 	# summary stats (diplomat/media)
 	python /work/cn-some/china-twitter/networks/src/summary_stats_focus.py \
-		-in  /work/cn-some/china-twitter/networks/data/clean/df_full.csv \
-		-out /work/cn-some/china-twitter/networks/fig/stats
+		-in  /work/cn-some/china-twitter/networks/data/clean/df_filtered.csv \
+		-out /work/cn-some/china-twitter/networks/fig/stats_filtered
 
 	# summary stats (global)
 	#python /work/cn-some/china-twitter/networks/src/summary_stats.py \

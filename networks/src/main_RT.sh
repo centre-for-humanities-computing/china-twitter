@@ -16,7 +16,7 @@ then
 	python /work/cn-some/china-twitter/networks/src/concat_files.py \
 		-i /work/cn-some/china-twitter/networks/data/raw/ \
 		-op /work/cn-some/china-twitter/networks/data/clean/ \
-		-on df_full.csv \
+		-on rt_df_full.csv \
 		-f False \
 		-or True
 fi

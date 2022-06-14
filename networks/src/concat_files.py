@@ -32,6 +32,10 @@ def subset_dates(df, filter_dates="True"):
 
 def main(inpath, outpath, outname, filter_dates = "True", only_retweets = "False"): # , engine='python', error_bad_lines=False)
     print("--- starting: processing ---")
+    print(f"outpath: {outpath}")
+    print(f"filter dates: {filter_dates}")
+    print(f"only retweets: {only_retweets}")
+    
     onlyfiles = [f for f in listdir(inpath) if isfile(join(inpath, f))]
     
     # testing something

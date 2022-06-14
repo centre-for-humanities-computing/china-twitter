@@ -189,7 +189,9 @@ def plot_network(G, nodelst, edgelst, color_dct, node_color, nodeedge_color, edg
     plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
 def main(n_labels, infile, outfolder): 
-    print(infile)
+    print(f"infile: {infile}")
+    print(f"outfolder: {outfolder}")
+
     ''' 1. vars '''
     seed = 11
     k = 1.8
@@ -318,6 +320,15 @@ def main(n_labels, infile, outfolder):
             ('AmbassadeChine', -0.05, 0.05),
             ('CHN_UN_NY', 0.05, -0.05),
             ('PDChina', 0.05, 0.05)
+        ]
+    else: # have not pruned this yet
+        nudge_triple = [
+            ('MFA_China', 0.05, -0.05),
+            ('chenweihua', 0, 0.02),
+            ('AmbassadeChine', 0, 0.05),
+            ('CHN_UN_NY', -0.02, 0.12),
+            ('ChinaMissionGva', 0, 0.02),
+            ('Chinamission2un', 0, 0.02)
         ]
 
     plot_network(
