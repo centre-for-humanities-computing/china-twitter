@@ -16,7 +16,7 @@ then
 	python /work/cn-some/china-twitter/networks/src/concat_files.py \
 		-i /work/cn-some/china-twitter/networks/data/raw/ \
 		-op /work/cn-some/china-twitter/networks/data/clean/ \
-		-on df_filtered.csv \
+		-on df.csv \
 		-f True \
 		-or False 
 fi
@@ -25,8 +25,8 @@ fi
 if [ $NET = true ]
 then
 	python /work/cn-some/china-twitter/networks/src/network_main.py \
-		-in  /work/cn-some/china-twitter/networks/data/clean/df_filtered.csv \
-		-out /work/cn-some/china-twitter/networks/fig/networks_filtered \
+		-in  /work/cn-some/china-twitter/networks/data/clean/df.csv \
+		-out /work/cn-some/china-twitter/networks/fig/networks \
 		-n 12
 fi 
 
@@ -35,8 +35,8 @@ if [ $SUM = true ]
 then
 	# summary stats (diplomat/media)
 	python /work/cn-some/china-twitter/networks/src/summary_stats_focus.py \
-		-in  /work/cn-some/china-twitter/networks/data/clean/df_filtered.csv \
-		-out /work/cn-some/china-twitter/networks/fig/stats_filtered
+		-in  /work/cn-some/china-twitter/networks/data/clean/df.csv \
+		-out /work/cn-some/china-twitter/networks/fig/stats
 
 	# summary stats (global)
 	#python /work/cn-some/china-twitter/networks/src/summary_stats.py \

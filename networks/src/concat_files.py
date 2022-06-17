@@ -56,7 +56,7 @@ def main(inpath, outpath, outname, filter_dates = "True", only_retweets = "False
     # only retweets
     if only_retweets == "True": 
         df_clean = df_clean[df_clean["retweet"] == "retweeted"]
-        outname = "rt_" + outname 
+        #outname = "rt_" + outname 
 
     df_clean.to_csv(f"{outpath}{outname}", index = False)
     print("--- finished: preprocessing ---")

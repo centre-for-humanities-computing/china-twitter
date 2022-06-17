@@ -45,6 +45,7 @@ def get_labels(G, type_str, type_lst, n_labels):
         'SpokespersonCHN', 
         'MFA_China',
         'zlj517',
+        'AmbLiuXiaoMing'
         #'PDChina', 
         #'AmbLiuXiaoMing', 
         #'AmbCuiTianKai',
@@ -299,19 +300,23 @@ def main(n_labels, infile, outfolder):
     title = 'Diplomats and Media sub-network (nodesize: total number of mentions)'
     filename = 'network_focus_mentions'
     
-    ## fix the fact that we now have two files 
-    if infile == "/work/cn-some/china-twitter/networks/data/clean/df_full.csv":
-        nudge_triple = [ # nudge triple specifically for this data & seed
-            ('MFA_China', 0, 0.1),
+
+    if infile == "/work/cn-some/china-twitter/networks/data/clean/df.csv": # have not pruned this yet
+        print('nudging full data set')
+        nudge_triple = [
+            ('MFA_China', 0.05, -0.05),
+            ('chenweihua', -0.03, 0.02),
             ('AmbassadeChine', 0, 0.05),
-            ('PDChina', 0, 0.05),
-            ('ChnMission', -0.05, 0.1),
-            ('consulat_de', -0.05, 0),
-            ('chenweihua', -0.05, 0)
-            ] 
+            ('CHN_UN_NY', -0.06, 0.6),
+            ('ChinaMissionGva', 0, 0.04),
+            ('Chinamission2un', 0.02, 0.055),
+            ('ChnMission', 0, 0.03),
+            ('consulat_de', 0.07, 0)
+        ]
     
-    if infile == "/work/cn-some/china-twitter/networks/data/clean/rt_df_full.csv":
+    else:
         nudge_triple = [ # nudge triple specifically for this data and seed
+        print('nudging retweet data set')
             ('consulat_de', -0.05, 0),
             ('Chinamission2un', 0.05, 0),
             ('zlj517', -0.1, -0.05),
@@ -321,15 +326,7 @@ def main(n_labels, infile, outfolder):
             ('CHN_UN_NY', 0.05, -0.05),
             ('PDChina', 0.05, 0.05)
         ]
-    else: # have not pruned this yet
-        nudge_triple = [
-            ('MFA_China', 0.05, -0.05),
-            ('chenweihua', 0, 0.02),
-            ('AmbassadeChine', 0, 0.05),
-            ('CHN_UN_NY', -0.02, 0.12),
-            ('ChinaMissionGva', 0, 0.02),
-            ('Chinamission2un', 0, 0.02)
-        ]
+
 
     plot_network(
         G = G, 
@@ -341,33 +338,6 @@ def main(n_labels, infile, outfolder):
         edge_color = edgecolor,
         labeldict = labeldict_mentions,
         node_size_lst = nodesize_mentions, 
-        edge_width_lst = edgesize,
-        node_divisor = node_divisor,
-        edge_divisor = edge_divisor,
-        title = title,
-        filename = filename,
-        outfolder = outfolder,
-        k = k,
-        seed = seed,
-        nudge_triple = nudge_triple)
-
-    ## unweighted degree
-    print('--> generating unweighted degree plot')
-    node_divisor = 0.05*10
-    edge_divisor = 100*edge_mult
-    title = 'Diplomats and Media sub-network (nodesize: number of neighbors)'
-    filename = 'network_focus_unweighted_degree'
-
-    plot_network(
-        G = G, 
-        nodelst = nodelst_unweighted,
-        edgelst = edgelst,
-        color_dct = c_node,
-        node_color = nodecolor_unweighted,
-        nodeedge_color = nodeedgecolor_unweighted,
-        edge_color = edgecolor,
-        labeldict = labeldict_unweighted,
-        node_size_lst = nodesize_unweighted, 
         edge_width_lst = edgesize,
         node_divisor = node_divisor,
         edge_divisor = edge_divisor,
