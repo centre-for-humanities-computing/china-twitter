@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import pickle
 
 ## load data ##
-network_dat = pd.read_csv("/work/cn-some/china-twitter/networks/data/clean/df_filtered.csv")
+network_dat = pd.read_csv("/work/cn-some/china-twitter/networks/data/clean/df.csv")
 network_dat = network_dat[["mentionee", "mentioner", "category_mentionee"]]
 network_dat = network_dat.drop_duplicates()
 metadata = pd.read_csv("/work/cn-some/china-twitter/bot-detection/curated_data/mentioner_fofo.csv")

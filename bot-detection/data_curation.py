@@ -53,7 +53,7 @@ d_complete.groupby('y').size() # many more bots (might want to balance by sampli
 ## balance classes ##
 class_size = d_complete.groupby('y').size().to_frame(name = 'count').reset_index() # 3474 in non-bot category
 min_category = class_size['count'].min()
-n_total = 2*min_category
+n_total = 2*min_category # 6948
 fraction_bot = 0.5 # reasonable estimate I think???
 fraction_human = 1 - fraction_bot 
 d_bot = d_complete[d_complete["is_bot"] == "True"].sample(n = np.int(n_total*fraction_bot))

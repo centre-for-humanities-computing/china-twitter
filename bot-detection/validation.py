@@ -21,6 +21,9 @@ vacc = vacc[["user_name", "user_followers", "user_friends"]].rename(
     }
 )
 
+# groupby mentioner
+vacc = vacc.groupby('mentioner')['followers_mentioner', 'following_mentioner'].mean().reset_index()
+
 ## load model 
 filename = "/work/cn-some/china-twitter/bot-detection/mdl/bot_detect_mdl.sav"
 clf = pickle.load(open(filename, 'rb'))

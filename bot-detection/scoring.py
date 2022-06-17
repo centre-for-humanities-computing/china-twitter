@@ -10,6 +10,8 @@ dat_overall = pd.read_csv("/work/cn-some/china-twitter/bot-detection/curated_dat
 dat_media = pd.read_csv("/work/cn-some/china-twitter/bot-detection/curated_data/media_data.csv")
 dat_diplomat = pd.read_csv("/work/cn-some/china-twitter/bot-detection/curated_data/diplomat_data.csv")
 
+
+
 ## load model 
 filename = "/work/cn-some/china-twitter/bot-detection/mdl/bot_detect_mdl.sav"
 clf = pickle.load(open(filename, 'rb'))
