@@ -238,19 +238,19 @@
 
 ### Figures 
 
-#### Figure 1
+#### Figure 1: Top mentionees (in-degree) and mentioners (out-degree) 
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/stats/summary_focus_degree.png)
 
-#### Figure 2
+#### Figure 2: Total mentions to handles in network from all Twitter users 
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_mentions_seed11_k1.8.png)
 
-#### Figure 3
+#### Figure 3: Total mentions between handles in network 
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_weighted_degree_seed11_k1.8.png)
 
-#### Figure 4
+#### Figure 4: Mentionees in network (in-degree) 
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_in_degree_seed11_k1.8.png)
 
-#### Figure 5
+#### Figure 5: Mentioners in network (out-degree) 
 ![alt text](https://github.com/centre-for-humanities-computing/china-twitter/blob/main/networks/fig/networks/network_focus_out_degree_seed11_k1.8.png)
 
 #### Figure 6 (diplomacy) open [here](http://htmlpreview.github.io/?https://github.com/centre-for-humanities-computing/china-twitter/blob/main/topic-model/plots/topic_model_diplomat.html)
@@ -286,7 +286,8 @@ A total of 180 models were trained for both diplomat and media tweets with a var
 
 The model with the best ![equation](https://latex.codecogs.com/svg.image?c_v) coherence score is chosen for analysis. 
 
-
+## Bot Detection
+We train a logistic classifier on the cresci-2017 (Cresci et al., 2017) data set (available: https://botometer.osome.iu.edu/bot-repository/datasets.html) to classify Twitter handles as genuine or spam/bot/fake. We use the widely used fofo metric (e.g. Yang et al., 2013; Tavazoee et al., 2020) which is (following/followers) of an account. We use (following+1/followers+1) to avoid division with zero, and we average following and followers for each handle when it appears more than once in our data sets. Using the trained model, we estimate the fraction of genuine accounts vs. spam/bot/fake accounts in our own data set, as well as in a baseline data set consisting of vaccine-related tweets from 2020-2021 (https://www.kaggle.com/datasets/gpreda/all-covid19-vaccines-tweets). We estimate 27.01% of the accounts in the baseline (vaccine) data set to be non-genuine accounts and 44.84% of accounts in our data set of Chinese state media and diplomats to be non-genuine accounts. There is considerable uncertainty around this estimate since (1) our data set might differ in other respects than the amount of bot-activity from the baseline data set and (2) while the fofo-metric is widely used (Yang et al., 2013) it is not universally found to be accurate in detecting bots.
 
 ### Usage:
 1.  Navigate to the topic model folder
