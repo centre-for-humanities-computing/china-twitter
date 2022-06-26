@@ -16,3 +16,8 @@ bot-detection/mentiondata
 bot-detection/covid19.zip
 bot-detection/cresci-2017.csv.zip
 bot-detection/vaccination_all_tweets.csv
+bot-detection/baseline_data
+bot-detection/res/results_diplomat.csv
+bot-detection/res/results_media.csv
+bot-detection/res/results_overall.csv
+bot-detection/res/results_vaccine_baseline.csv
