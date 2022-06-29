@@ -46,12 +46,6 @@ def get_labels(G, type_str, type_lst, n_labels):
         'MFA_China',
         'zlj517',
         'AmbLiuXiaoMing'
-        #'PDChina', 
-        #'AmbLiuXiaoMing', 
-        #'AmbCuiTianKai',
-        #'HuXijin_GT',
-        #'CNS51952',
-        #'ChnEmbassy_jp'
     ]
     
     lst_sorted = sorted(type_lst, reverse=True)
@@ -161,9 +155,8 @@ def plot_network(G, nodelst, edgelst, color_dct, node_color, nodeedge_color, edg
     title: <str> plot title 
     filename: <str> filename 
     '''
-
-    # setup 
-    fig, ax = plt.subplots(figsize=(2.5, 2.5), dpi=300, facecolor='w', edgecolor='k')
+    # NEW CODE 
+    fig, ax = plt.subplots(figsize=(3, 3), dpi=300, facecolor='w', edgecolor='k')
     plt.axis("off")
 
     # position & manual tweaking
@@ -181,11 +174,17 @@ def plot_network(G, nodelst, edgelst, color_dct, node_color, nodeedge_color, edg
 
     # labels 
     label_options = {"edgecolor": "none", "facecolor": "white", "alpha": 0}
-    nx.draw_networkx_labels(G,pos,labels=labeldict,font_size=3, bbox=label_options, font_weight = 'bold')
+    nx.draw_networkx_labels(
+        G,
+        pos,
+        labels=labeldict,
+        font_size=3, 
+        bbox=label_options, 
+        font_weight = 'bold')
 
     # formatting & save
     lines, labels = get_legend(node_size, color_dct)
-    fig.legend(lines, labels, loc = 'lower left', labelspacing = 1.2, fontsize = 6, frameon = False)
+    fig.legend(lines, labels, bbox_to_anchor=[0.45, 0.12], labelspacing = 1, columnspacing = 1, fontsize = 6, frameon = False, ncol=2, handletextpad=0.01)
     plt.tight_layout()
     plt.savefig(f"{outfolder}/{filename}_seed{seed}_k{k}.png", bbox_inches='tight')
 
@@ -304,7 +303,7 @@ def main(n_labels, infile, outfolder):
     if infile == "/work/cn-some/china-twitter/networks/data/clean/df.csv": # have not pruned this yet
         print('nudging full data set')
         nudge_triple = [
-            ('MFA_China', 0.05, -0.05),
+            ('MFA_China', 0.09, -0.09), # 0.05, -0.05
             ('chenweihua', -0.03, 0.02),
             ('AmbassadeChine', 0, 0.05),
             ('CHN_UN_NY', -0.06, 0.6),
@@ -315,11 +314,11 @@ def main(n_labels, infile, outfolder):
         ]
     
     else:
-        nudge_triple = [ # nudge triple specifically for this data and seed
         print('nudging retweet data set')
+        nudge_triple = [ # nudge triple specifically for this data and seed
             ('consulat_de', -0.05, 0),
             ('Chinamission2un', 0.05, 0),
-            ('zlj517', -0.1, -0.05),
+            ('zlj517', -0.15, -0.1),
             ('chenweihua', 0.05, 0.1),
             ('SpokespersonCHN', 0.05, 0.05),
             ('AmbassadeChine', -0.05, 0.05),
