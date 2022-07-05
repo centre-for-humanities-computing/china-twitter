@@ -19,7 +19,7 @@
 | 2\. Subsample of original tweets in English (topic analysis)                  | 239.943                    |
 | 2a. Diplomacy                                                                 | 25.830                     |
 | 2.b Media                                                                     | 214.113                    |
-| 3\. Coded sample of diplomacy original tweets in English (discourse analysis) | 1.200                      |
+| 3\. Coded sample of diplomacy original tweets in English (discourse analysis) | 4.879                      |
 
 
 #### Table 2: Diplomacy
